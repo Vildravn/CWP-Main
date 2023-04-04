@@ -1,4 +1,4 @@
-﻿ig_socialists = {
+﻿ig_workers = {
 	color = {
 		92
 		14
