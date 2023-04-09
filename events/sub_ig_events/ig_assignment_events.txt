@@ -1,0 +1,399 @@
+﻿namespace = sub_ig_assignment
+
+#Give Vice President Variable and Character
+############################# ARMED FORCES #############################
+sub_ig_assignment.1 = { # Juntaists
+	type = country_event
+	hidden = yes
+	trigger = {
+		not = { has_variable = juntaists_leader }
+	}
+	immediate = {
+		create_character = {
+			interest_group = ig_armed_forces
+			on_created = {
+				set_variable = juntaists_trigger
+				owner = {
+					set_variable = {
+						name = juntaists_leader
+						value = PREV
+					}
+				}
+			}		
+		}
+	}
+}
+
+sub_ig_assignment.2 = { # Loyalists
+	type = country_event
+	hidden = yes
+	trigger = {
+		not = { has_variable = loyalists_leader }
+	}
+	immediate = {
+		create_character = {
+			interest_group = ig_armed_forces
+			on_created = {
+				set_variable = loyalists_trigger
+				owner = {
+					set_variable = {
+						name = loyalists_leader
+						value = PREV
+					}
+				}
+			}		
+		}
+	}
+}
+
+sub_ig_assignment.3 = { # Militarists
+	type = country_event
+	hidden = yes
+	trigger = {
+		not = { has_variable = militarists_leader }
+	}
+	immediate = {
+		create_character = {
+			interest_group = ig_armed_forces
+			on_created = {
+				set_variable = militarists_trigger
+				owner = {
+					set_variable = {
+						name = militarists_leader
+						value = PREV
+					}
+				}
+			}		
+		}
+	}
+}
+############################# RELIGIOUS FOLK #############################
+sub_ig_assignment.4 = { # Devout Communities
+	type = country_event
+	hidden = yes
+	trigger = {
+		not = { has_variable = devout_leader }
+	}
+	immediate = {
+		create_character = {
+			interest_group = ig_religious_folk
+			on_created = {
+				set_variable = devout_trigger
+				owner = {
+					set_variable = {
+						name = devout_leader
+						value = PREV
+					}
+				}
+			}		
+		}
+	}
+}
+
+sub_ig_assignment.5 = { # Clergy
+	type = country_event
+	hidden = yes
+	trigger = {
+		not = { has_variable = clergy_leader }
+	}
+	immediate = {
+		create_character = {
+			interest_group = ig_religious_folk
+			on_created = {
+				set_variable = clergy_trigger
+				owner = {
+					set_variable = {
+						name = clergy_leader
+						value = PREV
+					}
+				}
+			}		
+		}
+	}
+}
+
+sub_ig_assignment.6 = { # Fundamentalists
+	type = country_event
+	hidden = yes
+	trigger = {
+		not = { has_variable = fundamentalists_leader }
+	}
+	immediate = {
+		create_character = {
+			interest_group = ig_religious_folk
+			on_created = {
+				set_variable = fundamentalists_trigger
+				owner = {
+					set_variable = {
+						name = fundamentalists_leader
+						value = PREV
+					}
+				}
+			}		
+		}
+	}
+}
+############################# ELITES #############################
+sub_ig_assignment.7 = { # Political Elite
+	type = country_event
+	hidden = yes
+	trigger = {
+		not = { has_variable = political_elite_leader }
+	}
+	immediate = {
+		create_character = {
+			interest_group = ig_elites
+			on_created = {
+				set_variable = political_elite_trigger
+				owner = {
+					set_variable = {
+						name = political_elite_leader
+						value = PREV
+					}
+				}
+			}		
+		}
+	}
+}
+
+sub_ig_assignment.8 = { # Landed Elite
+	type = country_event
+	hidden = yes
+	trigger = {
+		not = { has_variable = landed_elite_leader }
+	}
+	immediate = {
+		create_character = {
+			interest_group = ig_elites
+			on_created = {
+				set_variable = landed_elite_trigger
+				owner = {
+					set_variable = {
+						name = landed_elite_leader
+						value = PREV
+					}
+				}
+			}		
+		}
+	}
+}
+
+sub_ig_assignment.9 = { # Oligarchy
+	type = country_event
+	hidden = yes
+	trigger = {
+		not = { has_variable = oligarchy_leader }
+	}
+	immediate = {
+		create_character = {
+			interest_group = ig_elites
+			on_created = {
+				set_variable = oligarchy_trigger
+				owner = {
+					set_variable = {
+						name = oligarchy_leader
+						value = PREV
+					}
+				}
+			}		
+		}
+	}
+}
+############################# CORPORATIONS #############################
+sub_ig_assignment.10 = { # Manufacturing Industrialists
+	type = country_event
+	hidden = yes
+	trigger = {
+		not = { has_variable = manufacturing_industrialists_leader }
+	}
+	immediate = {
+		create_character = {
+			interest_group = ig_corporations
+			on_created = {
+				set_variable = manufacturing_industrialists_trigger
+				owner = {
+					set_variable = {
+						name = manufacturing_industrialists_leader
+						value = PREV
+					}
+				}
+			}		
+		}
+	}
+}
+
+sub_ig_assignment.11 = { # Service Industries
+	type = country_event
+	hidden = yes
+	trigger = {
+		not = { has_variable = service_industries_leader }
+	}
+	immediate = {
+		create_character = {
+			interest_group = ig_corporations
+			on_created = {
+				set_variable = service_industries_trigger
+				owner = {
+					set_variable = {
+						name = service_industries_leader
+						value = PREV
+					}
+				}
+			}		
+		}
+	}
+}
+
+sub_ig_assignment.12 = { # Innovative Industries
+	type = country_event
+	hidden = yes
+	trigger = {
+		not = { has_variable = innovative_industries_leader }
+	}
+	immediate = {
+		create_character = {
+			interest_group = ig_corporations
+			on_created = {
+				set_variable = innovative_industries_trigger
+				owner = {
+					set_variable = {
+						name = innovative_industries_leader
+						value = PREV
+					}
+				}
+			}		
+		}
+	}
+}
+############################# PETTY BOURGOUISIE #############################
+sub_ig_assignment.13 = { # Middle Class Workers
+	type = country_event
+	hidden = yes
+	trigger = {
+		not = { has_variable = middle_class_workers_leader }
+	}
+	immediate = {
+		create_character = {
+			interest_group = ig_petty_bourgeoisie
+			on_created = {
+				set_variable = middle_class_workers_trigger
+				owner = {
+					set_variable = {
+						name = middle_class_workers_leader
+						value = PREV
+					}
+				}
+			}		
+		}
+	}
+}
+
+sub_ig_assignment.14 = { # Small Businesses
+	type = country_event
+	hidden = yes
+	trigger = {
+		not = { has_variable = small_businesses_leader }
+	}
+	immediate = {
+		create_character = {
+			interest_group = ig_petty_bourgeoisie
+			on_created = {
+				set_variable = small_businesses_trigger
+				owner = {
+					set_variable = {
+						name = small_businesses_leader
+						value = PREV
+					}
+				}
+			}		
+		}
+	}
+}
+
+sub_ig_assignment.15 = { # Patriots
+	type = country_event
+	hidden = yes
+	trigger = {
+		not = { has_variable = patriots_leader }
+	}
+	immediate = {
+		create_character = {
+			interest_group = ig_petty_bourgeoisie
+			on_created = {
+				set_variable = patriots_trigger
+				owner = {
+					set_variable = {
+						name = patriots_leader
+						value = PREV
+					}
+				}
+			}		
+		}
+	}
+}
+############################# EDUCATED PROFESSIONALS #############################
+sub_ig_assignment.16 = { # Academics
+	type = country_event
+	hidden = yes
+	trigger = {
+		not = { has_variable = academics_leader }
+	}
+	immediate = {
+		create_character = {
+			interest_group = ig_educated_professionals
+			on_created = {
+				set_variable = academics_trigger
+				owner = {
+					set_variable = {
+						name = academics_leader
+						value = PREV
+					}
+				}
+			}		
+		}
+	}
+}
+
+sub_ig_assignment.17 = { # Urban Professionals
+	type = country_event
+	hidden = yes
+	trigger = {
+		not = { has_variable = urban_professionals_leader }
+	}
+	immediate = {
+		create_character = {
+			interest_group = ig_educated_professionals
+			on_created = {
+				set_variable = urban_professionals_trigger
+				owner = {
+					set_variable = {
+						name = urban_professionals_leader
+						value = PREV
+					}
+				}
+			}		
+		}
+	}
+}
+
+sub_ig_assignment.18 = { # Scientific Professionals
+	type = country_event
+	hidden = yes
+	trigger = {
+		not = { has_variable = scientific_professionals_leader }
+	}
+	immediate = {
+		create_character = {
+			interest_group = ig_educated_professionals
+			on_created = {
+				set_variable = scientific_professionals_trigger
+				owner = {
+					set_variable = {
+						name = scientific_professionals_leader
+						value = PREV
+					}
+				}
+			}		
+		}
+	}
+}

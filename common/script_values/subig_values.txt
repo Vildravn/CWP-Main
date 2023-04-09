@@ -1,4 +1,110 @@
-﻿##### Armed Forces
+﻿##### Armed Forces #####
 juntaists_value = {
+	value = var:juntaists_leader.popularity
+}
+
+loyalists_value = {
+	value = var:loyalists_leader.popularity
+}
+
+militarists_value = {
+	value = var:militarists_leader.popularity
+}
+
+##### Religious #####
+devout_communities_value = {
+	value = var:devout_leader.popularity
+}
+
+clergy_value = {
+	value = var:clergy_leader.popularity
+}
+
+fundamentalists_value = {
+	value = var:fundamentalists_leader.popularity
+}
+
+##### Elites #####
+political_elite_value = {
+	value = var:political_elite_leader.popularity
+}
+
+landed_elite_value = {
+	value = var:landed_elite_leader.popularity
+}
+
+oligarchy_value = {
+	value = var:oligarchy_leader.popularity
+}
+##### Corporations #####
+manufacturing_industrialists_value = {
+	value = var:manufacturing_industrialists_leader.popularity
+}
+
+service_industries_value = {
+	value = var:innovative_industries_leader.popularity
+}
+
+innovative_industries_value = {
+	value = var:political_elite_leader.popularity
+}
+##### Petty Bourgouisie #####
+middle_class_workers_value = {
+	value = var:middle_class_workers_leader.popularity
+}
+
+small_businesses_value = {
+	value = var:small_businesses_leader.popularity
+}
+
+patriots_value = {
+	value = var:patriots_leader.popularity
+}
+##### Educated Professionals #####
+academics_value = {
+	value = var:academics_leader.popularity
+}
+
+urban_professionals_value = {
+	value = var:urban_professionals_leader.popularity
+}
+
+scientific_professionals_value = {
+	value = var:scientific_professionals_leader.popularity
+}
+##### Rural Communities #####
+agricultural_businesses_value = {
+
+}
+
+small_farms_value = {
+
+}
+
+revolutionary_rural_groups_value = {
+
+}
+##### State Employees #####
+civil_service_value = {
+
+}
+
+public_sector_workers_value = {
+
+}
+
+security_services_value = {
+
+}
+##### Workers #####
+democratic_workers_value = {
+
+}
+
+trade_unionists_value = {
+
+}
+
+revolutionary_workers_value = {
 
 }

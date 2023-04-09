@@ -559,6 +559,7 @@ types information_panels_types
 									}
 								}
 								flowcontainer = {
+									visible = "[Country.MakeScope.Var('middle_class_workers_leader').IsSet]"
 									direction = horizontal
 									spacing = 20
 									margin = { 60 10 }
@@ -568,7 +569,7 @@ types information_panels_types
 									textbox = {
 										#layoutpolicy_horizontal = expanding
 										size = { 0 30 }
-										raw_text = "#v Middle Class Workers#! - 20%"
+										raw_text = "#v Middle Class Workers#! [GetPlayer.MakeScope.ScriptValue('middle_class_workers_value')|d]"
 										align = left|nobaseline
 										autoresize = yes
 										using = fontsize_large
@@ -579,7 +580,7 @@ types information_panels_types
 										size = { 30 30 }
 										character_portrait_medium = {
 											scale = 0.7
-											datacontext = "[InterestGroup.AccessLeader]"
+											datacontext = "[Country.MakeScope.Var('middle_class_workers_leader').GetCharacter]"
 											using = tooltip_above
 											blockoverride "show_hat" {}
 											parentanchor = vcenter
@@ -588,6 +589,7 @@ types information_panels_types
 									}
 								}
 								flowcontainer = {
+									visible = "[Country.MakeScope.Var('small_businesses_leader').IsSet]"
 									direction = horizontal
 									spacing = 20
 									margin = { 60 10 }
@@ -597,7 +599,7 @@ types information_panels_types
 									textbox = {
 										#layoutpolicy_horizontal = expanding
 										size = { 0 30 }
-										raw_text = "#v Small Businesses#! - 20%"
+										raw_text = "#v Small Businesses#! [GetPlayer.MakeScope.ScriptValue('small_businesses_value')|d]"
 										align = left|nobaseline
 										autoresize = yes
 										using = fontsize_large
@@ -608,7 +610,7 @@ types information_panels_types
 										size = { 30 30 }
 										character_portrait_medium = {
 											scale = 0.7
-											datacontext = "[InterestGroup.AccessLeader]"
+											datacontext = "[Country.MakeScope.Var('small_businesses_leader').GetCharacter]"
 											using = tooltip_above
 											blockoverride "show_hat" {}
 											parentanchor = vcenter
@@ -618,6 +620,7 @@ types information_panels_types
 									
 								}
 								flowcontainer = {
+									visible = "[Country.MakeScope.Var('patriots_leader').IsSet]"
 									direction = horizontal
 									spacing = 20
 									margin = { 60 10 }
@@ -627,7 +630,7 @@ types information_panels_types
 									textbox = {
 										#layoutpolicy_horizontal = expanding
 										size = { 0 30 }
-										raw_text = "#v Patriots#! - 20%"
+										raw_text = "#v Patriots#! [GetPlayer.MakeScope.ScriptValue('juntaists_value')|d]"
 										align = left|nobaseline
 										autoresize = yes
 										using = fontsize_large
@@ -638,7 +641,7 @@ types information_panels_types
 										size = { 30 30 }
 										character_portrait_medium = {
 											scale = 0.7
-											datacontext = "[InterestGroup.AccessLeader]"
+											datacontext = "[Country.MakeScope.Var('patriots_leader').GetCharacter]"
 											using = tooltip_above
 											blockoverride "show_hat" {}
 											parentanchor = vcenter
@@ -684,6 +687,7 @@ types information_panels_types
 									}
 								}
 								flowcontainer = {
+									visible = "[Country.MakeScope.Var('juntaists_leader').IsSet]"
 									direction = horizontal
 									spacing = 20
 									margin = { 60 10 }
@@ -693,7 +697,7 @@ types information_panels_types
 									textbox = {
 										#layoutpolicy_horizontal = expanding
 										size = { 0 30 }
-										raw_text = "#v Juntaists#! - 20%"
+										raw_text = "#v Juntaists#! [GetPlayer.MakeScope.ScriptValue('juntaists_value')|d]"
 										align = left|nobaseline
 										autoresize = yes
 										using = fontsize_large
@@ -704,7 +708,7 @@ types information_panels_types
 										size = { 30 30 }
 										character_portrait_medium = {
 											scale = 0.7
-											datacontext = "[InterestGroup.AccessLeader]"
+											datacontext = "[Country.MakeScope.Var('juntaists_leader').GetCharacter]"
 											using = tooltip_above
 											blockoverride "show_hat" {}
 											parentanchor = vcenter
@@ -713,6 +717,7 @@ types information_panels_types
 									}
 								}
 								flowcontainer = {
+									visible = "[Country.MakeScope.Var('loyalists_leader').IsSet]"
 									direction = horizontal
 									spacing = 20
 									margin = { 60 10 }
@@ -722,7 +727,7 @@ types information_panels_types
 									textbox = {
 										#layoutpolicy_horizontal = expanding
 										size = { 0 30 }
-										raw_text = "#v Loyalists#! - 20%"
+										raw_text = "#v Loyalists#! [GetPlayer.MakeScope.ScriptValue('loyalists_value')|d]"
 										align = left|nobaseline
 										autoresize = yes
 										using = fontsize_large
@@ -733,7 +738,7 @@ types information_panels_types
 										size = { 30 30 }
 										character_portrait_medium = {
 											scale = 0.7
-											datacontext = "[InterestGroup.AccessLeader]"
+											datacontext = "[Country.MakeScope.Var('loyalists_leader').GetCharacter]"
 											using = tooltip_above
 											blockoverride "show_hat" {}
 											parentanchor = vcenter
@@ -743,6 +748,7 @@ types information_panels_types
 									
 								}
 								flowcontainer = {
+									visible = "[Country.MakeScope.Var('militarists_leader').IsSet]"
 									direction = horizontal
 									spacing = 20
 									margin = { 60 10 }
@@ -752,7 +758,7 @@ types information_panels_types
 									textbox = {
 										#layoutpolicy_horizontal = expanding
 										size = { 0 30 }
-										raw_text = "#v Militarists#! - 20%"
+										raw_text = "#v Militarists#! [GetPlayer.MakeScope.ScriptValue('militarists_value')|d]"
 										align = left|nobaseline
 										autoresize = yes
 										using = fontsize_large
@@ -763,7 +769,7 @@ types information_panels_types
 										size = { 30 30 }
 										character_portrait_medium = {
 											scale = 0.7
-											datacontext = "[InterestGroup.AccessLeader]"
+											datacontext = "[Country.MakeScope.Var('militarists_leader').GetCharacter]"
 											using = tooltip_above
 											blockoverride "show_hat" {}
 											parentanchor = vcenter
@@ -809,6 +815,7 @@ types information_panels_types
 									}
 								}
 								flowcontainer = {
+									visible = "[Country.MakeScope.Var('devout_leader').IsSet]"
 									direction = horizontal
 									spacing = 20
 									margin = { 60 10 }
@@ -818,7 +825,7 @@ types information_panels_types
 									textbox = {
 										#layoutpolicy_horizontal = expanding
 										size = { 0 30 }
-										raw_text = "#v Devout Communities#! - 20%"
+										raw_text = "#v Devout Communities#! [GetPlayer.MakeScope.ScriptValue('devout_communities_value')|d]"
 										align = left|nobaseline
 										autoresize = yes
 										using = fontsize_large
@@ -829,7 +836,7 @@ types information_panels_types
 										size = { 30 30 }
 										character_portrait_medium = {
 											scale = 0.7
-											datacontext = "[InterestGroup.AccessLeader]"
+											datacontext = "[Country.MakeScope.Var('devout_leader').GetCharacter]"
 											using = tooltip_above
 											blockoverride "show_hat" {}
 											parentanchor = vcenter
@@ -838,6 +845,7 @@ types information_panels_types
 									}
 								}
 								flowcontainer = {
+									visible = "[Country.MakeScope.Var('clergy_leader').IsSet]"
 									direction = horizontal
 									spacing = 20
 									margin = { 60 10 }
@@ -847,7 +855,7 @@ types information_panels_types
 									textbox = {
 										#layoutpolicy_horizontal = expanding
 										size = { 0 30 }
-										raw_text = "#v Clergy#! - 20%"
+										raw_text = "#v Clergy#! [GetPlayer.MakeScope.ScriptValue('clergy_value')|d]"
 										align = left|nobaseline
 										autoresize = yes
 										using = fontsize_large
@@ -858,7 +866,7 @@ types information_panels_types
 										size = { 30 30 }
 										character_portrait_medium = {
 											scale = 0.7
-											datacontext = "[InterestGroup.AccessLeader]"
+											datacontext = "[Country.MakeScope.Var('clergy_leader').GetCharacter]"
 											using = tooltip_above
 											blockoverride "show_hat" {}
 											parentanchor = vcenter
@@ -868,6 +876,7 @@ types information_panels_types
 									
 								}
 								flowcontainer = {
+									visible = "[Country.MakeScope.Var('fundamentalists_leader').IsSet]"
 									direction = horizontal
 									spacing = 20
 									margin = { 60 10 }
@@ -877,7 +886,7 @@ types information_panels_types
 									textbox = {
 										#layoutpolicy_horizontal = expanding
 										size = { 0 30 }
-										raw_text = "#v Fundamentalists#! - 20%"
+										raw_text = "#v Fundamentalists#! [GetPlayer.MakeScope.ScriptValue('fundamentalists_value')|d]"
 										align = left|nobaseline
 										autoresize = yes
 										using = fontsize_large
@@ -888,7 +897,7 @@ types information_panels_types
 										size = { 30 30 }
 										character_portrait_medium = {
 											scale = 0.7
-											datacontext = "[InterestGroup.AccessLeader]"
+											datacontext = "[Country.MakeScope.Var('fundamentalists_leader').GetCharacter]"
 											using = tooltip_above
 											blockoverride "show_hat" {}
 											parentanchor = vcenter
@@ -934,6 +943,7 @@ types information_panels_types
 									}
 								}
 								flowcontainer = {
+									visible = "[Country.MakeScope.Var('political_elite_leader').IsSet]"
 									direction = horizontal
 									spacing = 20
 									margin = { 60 10 }
@@ -943,7 +953,7 @@ types information_panels_types
 									textbox = {
 										#layoutpolicy_horizontal = expanding
 										size = { 0 30 }
-										raw_text = "#v Political Elite#! - 20%"
+										raw_text = "#v Political Elite#! [GetPlayer.MakeScope.ScriptValue('political_elite_value')|d]"
 										align = left|nobaseline
 										autoresize = yes
 										using = fontsize_large
@@ -954,7 +964,7 @@ types information_panels_types
 										size = { 30 30 }
 										character_portrait_medium = {
 											scale = 0.7
-											datacontext = "[InterestGroup.AccessLeader]"
+											datacontext = "[Country.MakeScope.Var('political_elite_leader').GetCharacter]"
 											using = tooltip_above
 											blockoverride "show_hat" {}
 											parentanchor = vcenter
@@ -963,6 +973,7 @@ types information_panels_types
 									}
 								}
 								flowcontainer = {
+									visible = "[Country.MakeScope.Var('landed_elite_leader').IsSet]"
 									direction = horizontal
 									spacing = 20
 									margin = { 60 10 }
@@ -972,7 +983,7 @@ types information_panels_types
 									textbox = {
 										#layoutpolicy_horizontal = expanding
 										size = { 0 30 }
-										raw_text = "#v Landed Elite#! - 20%"
+										raw_text = "#v Landed Elite#! [GetPlayer.MakeScope.ScriptValue('landed_elite_value')|d]"
 										align = left|nobaseline
 										autoresize = yes
 										using = fontsize_large
@@ -983,7 +994,7 @@ types information_panels_types
 										size = { 30 30 }
 										character_portrait_medium = {
 											scale = 0.7
-											datacontext = "[InterestGroup.AccessLeader]"
+											datacontext = "[Country.MakeScope.Var('landed_elite_leader').GetCharacter]"
 											using = tooltip_above
 											blockoverride "show_hat" {}
 											parentanchor = vcenter
@@ -993,6 +1004,7 @@ types information_panels_types
 									
 								}
 								flowcontainer = {
+									visible = "[Country.MakeScope.Var('oligarchy_leader').IsSet]"
 									direction = horizontal
 									spacing = 20
 									margin = { 60 10 }
@@ -1002,7 +1014,7 @@ types information_panels_types
 									textbox = {
 										#layoutpolicy_horizontal = expanding
 										size = { 0 30 }
-										raw_text = "#v Oligarchs#! - 20%"
+										raw_text = "#v Oligarchs#! [GetPlayer.MakeScope.ScriptValue('oligarchy_value')|d]"
 										align = left|nobaseline
 										autoresize = yes
 										using = fontsize_large
@@ -1013,7 +1025,7 @@ types information_panels_types
 										size = { 30 30 }
 										character_portrait_medium = {
 											scale = 0.7
-											datacontext = "[InterestGroup.AccessLeader]"
+											datacontext = "[Country.MakeScope.Var('oligarchy_leader').GetCharacter]"
 											using = tooltip_above
 											blockoverride "show_hat" {}
 											parentanchor = vcenter
@@ -1059,6 +1071,7 @@ types information_panels_types
 									}
 								}
 								flowcontainer = {
+									visible = "[Country.MakeScope.Var('manufacturing_industrialists_leader').IsSet]"
 									direction = horizontal
 									spacing = 20
 									margin = { 60 10 }
@@ -1068,7 +1081,7 @@ types information_panels_types
 									textbox = {
 										#layoutpolicy_horizontal = expanding
 										size = { 0 30 }
-										raw_text = "#v Manufacturing Industrialists#! - 20%"
+										raw_text = "#v Manufacturing Industrialists#! [GetPlayer.MakeScope.ScriptValue('manufacturing_industrialists_value')|d]"
 										align = left|nobaseline
 										autoresize = yes
 										using = fontsize_large
@@ -1079,7 +1092,7 @@ types information_panels_types
 										size = { 30 30 }
 										character_portrait_medium = {
 											scale = 0.7
-											datacontext = "[InterestGroup.AccessLeader]"
+											datacontext = "[Country.MakeScope.Var('manufacturing_industrialists_leader').GetCharacter]"
 											using = tooltip_above
 											blockoverride "show_hat" {}
 											parentanchor = vcenter
@@ -1088,6 +1101,7 @@ types information_panels_types
 									}
 								}
 								flowcontainer = {
+									visible = "[Country.MakeScope.Var('service_industries_leader').IsSet]"
 									direction = horizontal
 									spacing = 20
 									margin = { 60 10 }
@@ -1097,7 +1111,7 @@ types information_panels_types
 									textbox = {
 										#layoutpolicy_horizontal = expanding
 										size = { 0 30 }
-										raw_text = "#v Service Industries#! - 20%"
+										raw_text = "#v Service Industries#! [GetPlayer.MakeScope.ScriptValue('service_industries_value')|d]"
 										align = left|nobaseline
 										autoresize = yes
 										using = fontsize_large
@@ -1108,7 +1122,7 @@ types information_panels_types
 										size = { 30 30 }
 										character_portrait_medium = {
 											scale = 0.7
-											datacontext = "[InterestGroup.AccessLeader]"
+											datacontext = "[Country.MakeScope.Var('service_industries_leader').GetCharacter]"
 											using = tooltip_above
 											blockoverride "show_hat" {}
 											parentanchor = vcenter
@@ -1118,6 +1132,7 @@ types information_panels_types
 									
 								}
 								flowcontainer = {
+									visible = "[Country.MakeScope.Var('innovative_industries_leader').IsSet]"
 									direction = horizontal
 									spacing = 20
 									margin = { 60 10 }
@@ -1127,7 +1142,7 @@ types information_panels_types
 									textbox = {
 										#layoutpolicy_horizontal = expanding
 										size = { 0 30 }
-										raw_text = "#v Innovative Industries#! - 20%"
+										raw_text = "#v Innovative Industries#! [GetPlayer.MakeScope.ScriptValue('innovative_industries_value')|d]"
 										align = left|nobaseline
 										autoresize = yes
 										using = fontsize_large
@@ -1138,7 +1153,7 @@ types information_panels_types
 										size = { 30 30 }
 										character_portrait_medium = {
 											scale = 0.7
-											datacontext = "[InterestGroup.AccessLeader]"
+											datacontext = "[Country.MakeScope.Var('innovative_industries_leader').GetCharacter]"
 											using = tooltip_above
 											blockoverride "show_hat" {}
 											parentanchor = vcenter
@@ -1184,6 +1199,7 @@ types information_panels_types
 									}
 								}
 								flowcontainer = {
+									visible = "[Country.MakeScope.Var('academics_leader').IsSet]"
 									direction = horizontal
 									spacing = 20
 									margin = { 60 10 }
@@ -1193,7 +1209,7 @@ types information_panels_types
 									textbox = {
 										#layoutpolicy_horizontal = expanding
 										size = { 0 30 }
-										raw_text = "#v Academics#! - 20%"
+										raw_text = "#v Academics#! [GetPlayer.MakeScope.ScriptValue('academics_value')|d]"
 										align = left|nobaseline
 										autoresize = yes
 										using = fontsize_large
@@ -1204,7 +1220,7 @@ types information_panels_types
 										size = { 30 30 }
 										character_portrait_medium = {
 											scale = 0.7
-											datacontext = "[InterestGroup.AccessLeader]"
+											datacontext = "[Country.MakeScope.Var('academics_leader').GetCharacter]"
 											using = tooltip_above
 											blockoverride "show_hat" {}
 											parentanchor = vcenter
@@ -1213,6 +1229,7 @@ types information_panels_types
 									}
 								}
 								flowcontainer = {
+									visible = "[Country.MakeScope.Var('urban_professionals_leader').IsSet]"
 									direction = horizontal
 									spacing = 20
 									margin = { 60 10 }
@@ -1222,7 +1239,7 @@ types information_panels_types
 									textbox = {
 										#layoutpolicy_horizontal = expanding
 										size = { 0 30 }
-										raw_text = "#v Urban Professionals#! - 20%"
+										raw_text = "#v Urban Professionals#! [GetPlayer.MakeScope.ScriptValue('urban_professionals_value')|d]"
 										align = left|nobaseline
 										autoresize = yes
 										using = fontsize_large
@@ -1233,7 +1250,7 @@ types information_panels_types
 										size = { 30 30 }
 										character_portrait_medium = {
 											scale = 0.7
-											datacontext = "[InterestGroup.AccessLeader]"
+											datacontext = "[Country.MakeScope.Var('urban_professionals_leader').GetCharacter]"
 											using = tooltip_above
 											blockoverride "show_hat" {}
 											parentanchor = vcenter
@@ -1243,6 +1260,7 @@ types information_panels_types
 									
 								}
 								flowcontainer = {
+									visible = "[Country.MakeScope.Var('scientific_professionals_leader').IsSet]"
 									direction = horizontal
 									spacing = 20
 									margin = { 60 10 }
@@ -1252,7 +1270,7 @@ types information_panels_types
 									textbox = {
 										#layoutpolicy_horizontal = expanding
 										size = { 0 30 }
-										raw_text = "#v Scientific Professionals#! - 20%"
+										raw_text = "#v Scientific Professionals#! [GetPlayer.MakeScope.ScriptValue('scientific_professionals_value')|d]"
 										align = left|nobaseline
 										autoresize = yes
 										using = fontsize_large
@@ -1263,7 +1281,7 @@ types information_panels_types
 										size = { 30 30 }
 										character_portrait_medium = {
 											scale = 0.7
-											datacontext = "[InterestGroup.AccessLeader]"
+											datacontext = "[Country.MakeScope.Var('scientific_professionals_leader').GetCharacter]"
 											using = tooltip_above
 											blockoverride "show_hat" {}
 											parentanchor = vcenter
