@@ -149,4 +149,61 @@ GLOBAL = {
 	every_country = {
 		update_party_support = yes
 	}
+	# Interest Group Sub-igs set
+	every_country = {
+		every_interest_group = {
+			limit = {
+				is_interest_group_type = ig_armed_forces
+			}
+			set_variable = armed_forces_sub_ig
+		}
+		every_interest_group = {
+			limit = {
+				is_interest_group_type = ig_corporations
+			}
+			set_variable = corporations_sub_ig
+		}
+		every_interest_group = {
+			limit = {
+				is_interest_group_type = ig_educated_professionals
+			}
+			set_variable = educated_sub_ig
+		}
+		every_interest_group = {
+			limit = {
+				is_interest_group_type = ig_elites
+			}
+			set_variable = elites_sub_ig
+		}
+		every_interest_group = {
+			limit = {
+				is_interest_group_type = ig_petty_bourgeoisie
+			}
+			set_variable = petty_bourgeouisie_sub_ig
+		}
+		every_interest_group = {
+			limit = {
+				is_interest_group_type = ig_religious_folk
+			}
+			set_variable = religious_folk_sub_ig
+		}
+		every_interest_group = {
+			limit = {
+				is_interest_group_type = ig_rural_communities
+			}
+			set_variable = rural_sub_ig
+		}
+		every_interest_group = {
+			limit = {
+				is_interest_group_type = ig_state_employees
+			}
+			set_variable = state_sub_ig
+		}
+		every_interest_group = {
+			limit = {
+				is_interest_group_type = ig_workers
+			}
+			set_variable = workers_sub_ig
+		}
+	}
 }

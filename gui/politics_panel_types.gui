@@ -523,7 +523,8 @@ types information_panels_types
 								}
 							}
 						}
-						flowcontainer = {
+						flowcontainer = { # Petty Bourgeouisie Subigs
+							visible = "[InterestGroup.MakeScope.Var('petty_bourgeouisie_sub_ig').IsSet]"
 							direction = vertical
 							section_header_button = { # Text
 								blockoverride "layout" {
@@ -533,17 +534,17 @@ types information_panels_types
 									raw_text = "Groups"
 								}
 								blockoverride "onclick" {
-									onclick = "[GetVariableSystem.Toggle('show_subig')]"
+									onclick = "[GetVariableSystem.Toggle('show_subig_petite')]"
 								}
 								blockoverride "onclick_showless" {
-									visible = "[Not(GetVariableSystem.Exists('show_subig'))]"
+									visible = "[Not(GetVariableSystem.Exists('show_subig_petite'))]"
 								}
 								blockoverride "onclick_showmore" {
-									visible = "[GetVariableSystem.Exists('show_subig')]"
+									visible = "[GetVariableSystem.Exists('show_subig_petite')]"
 								}
 							}
 							flowcontainer = {# SUB IG system
-								visible = "[GetVariableSystem.Exists('show_subig')]"
+								visible = "[GetVariableSystem.Exists('show_subig_petite')]"
 								margin = { 10 10 }
 								direction = vertical
 								spacing = 10
@@ -567,7 +568,7 @@ types information_panels_types
 									textbox = {
 										#layoutpolicy_horizontal = expanding
 										size = { 0 30 }
-										raw_text = "#v [InterestGroup.GetNameNoFormatting]#!"
+										raw_text = "#v Middle Class Workers#! - 20%"
 										align = left|nobaseline
 										autoresize = yes
 										using = fontsize_large
@@ -576,7 +577,6 @@ types information_panels_types
 									}
 									widget = {
 										size = { 30 30 }
-					
 										character_portrait_medium = {
 											scale = 0.7
 											datacontext = "[InterestGroup.AccessLeader]"
@@ -585,19 +585,136 @@ types information_panels_types
 											parentanchor = vcenter
 											blockoverride "highlight" {}
 										}
-					
-										icon = {
-											datacontext = "[InterestGroup.AccessLeader.GetIdeology]"
-											texture = "[Ideology.GetTexture]"
-											tooltipwidget = {
-												FancyTooltip_Ideology = {}
-											}
-											size = { 30 30 }
-											parentanchor = bottom|right
+									}
+								}
+								flowcontainer = {
+									direction = horizontal
+									spacing = 20
+									margin = { 60 10 }
+									background = {
+										using = dropdown_background
+									}
+									textbox = {
+										#layoutpolicy_horizontal = expanding
+										size = { 0 30 }
+										raw_text = "#v Small Businesses#! - 20%"
+										align = left|nobaseline
+										autoresize = yes
+										using = fontsize_large
+										block "highlight_name" {}
+										elide = right
+									}
+									widget = {
+										size = { 30 30 }
+										character_portrait_medium = {
+											scale = 0.7
+											datacontext = "[InterestGroup.AccessLeader]"
+											using = tooltip_above
+											blockoverride "show_hat" {}
+											parentanchor = vcenter
+											blockoverride "highlight" {}
+										}
+									}
+									
+								}
+								flowcontainer = {
+									direction = horizontal
+									spacing = 20
+									margin = { 60 10 }
+									background = {
+										using = dropdown_background
+									}
+									textbox = {
+										#layoutpolicy_horizontal = expanding
+										size = { 0 30 }
+										raw_text = "#v Patriots#! - 20%"
+										align = left|nobaseline
+										autoresize = yes
+										using = fontsize_large
+										block "highlight_name" {}
+										elide = right
+									}
+									widget = {
+										size = { 30 30 }
+										character_portrait_medium = {
+											scale = 0.7
+											datacontext = "[InterestGroup.AccessLeader]"
+											using = tooltip_above
+											blockoverride "show_hat" {}
+											parentanchor = vcenter
+											blockoverride "highlight" {}
+										}
+									}
+								}
+							}
+						}
+						flowcontainer = { # Armed Forces Subigs
+							visible = "[InterestGroup.MakeScope.Var('armed_forces_sub_ig').IsSet]"
+							direction = vertical
+							section_header_button = { # Text
+								blockoverride "layout" {
+									size = { 400 40 }
+								}
+								blockoverride "left_text" {
+									raw_text = "Groups"
+								}
+								blockoverride "onclick" {
+									onclick = "[GetVariableSystem.Toggle('show_subig_armed')]"
+								}
+								blockoverride "onclick_showless" {
+									visible = "[Not(GetVariableSystem.Exists('show_subig_armed'))]"
+								}
+								blockoverride "onclick_showmore" {
+									visible = "[GetVariableSystem.Exists('show_subig_armed')]"
+								}
+							}
+							flowcontainer = {# SUB IG system
+								visible = "[GetVariableSystem.Exists('show_subig_armed')]"
+								margin = { 10 10 }
+								direction = vertical
+								spacing = 10
+								background = {
+									using = dropdown_background
+
+									modify_texture = {
+										texture = "gfx/interface/masks/fade_horizontal_center.dds"
+										spriteType = Corneredstretched
+										spriteborder = { 0 0 }
+										blend_mode = alphamultiply
+									}
+								}
+								flowcontainer = {
+									direction = horizontal
+									spacing = 20
+									margin = { 60 10 }
+									background = {
+										using = dropdown_background
+									}
+									textbox = {
+										#layoutpolicy_horizontal = expanding
+										size = { 0 30 }
+										raw_text = "#v Juntaists#! - 20%"
+										align = left|nobaseline
+										autoresize = yes
+										using = fontsize_large
+										block "highlight_name" {}
+										elide = right
+									}
+									widget = {
+										size = { 30 30 }
+										character_portrait_medium = {
+											scale = 0.7
+											datacontext = "[InterestGroup.AccessLeader]"
+											using = tooltip_above
+											blockoverride "show_hat" {}
+											parentanchor = vcenter
+											blockoverride "highlight" {}
 										}
 									}
 								}
 								flowcontainer = {
+									direction = horizontal
+									spacing = 20
 									margin = { 60 10 }
 									background = {
 										using = dropdown_background
@@ -605,15 +722,95 @@ types information_panels_types
 									textbox = {
 										#layoutpolicy_horizontal = expanding
 										size = { 0 30 }
-										raw_text = "#v [InterestGroup.GetNameNoFormatting]#!"
+										raw_text = "#v Loyalists#! - 20%"
 										align = left|nobaseline
 										autoresize = yes
 										using = fontsize_large
 										block "highlight_name" {}
 										elide = right
+									}
+									widget = {
+										size = { 30 30 }
+										character_portrait_medium = {
+											scale = 0.7
+											datacontext = "[InterestGroup.AccessLeader]"
+											using = tooltip_above
+											blockoverride "show_hat" {}
+											parentanchor = vcenter
+											blockoverride "highlight" {}
+										}
+									}
+									
+								}
+								flowcontainer = {
+									direction = horizontal
+									spacing = 20
+									margin = { 60 10 }
+									background = {
+										using = dropdown_background
+									}
+									textbox = {
+										#layoutpolicy_horizontal = expanding
+										size = { 0 30 }
+										raw_text = "#v Militarists#! - 20%"
+										align = left|nobaseline
+										autoresize = yes
+										using = fontsize_large
+										block "highlight_name" {}
+										elide = right
+									}
+									widget = {
+										size = { 30 30 }
+										character_portrait_medium = {
+											scale = 0.7
+											datacontext = "[InterestGroup.AccessLeader]"
+											using = tooltip_above
+											blockoverride "show_hat" {}
+											parentanchor = vcenter
+											blockoverride "highlight" {}
+										}
+									}
+								}
+							}
+						}
+						flowcontainer = { # Religious Folk Subigs
+							visible = "[InterestGroup.MakeScope.Var('religious_folk_sub_ig').IsSet]"
+							direction = vertical
+							section_header_button = { # Text
+								blockoverride "layout" {
+									size = { 400 40 }
+								}
+								blockoverride "left_text" {
+									raw_text = "Groups"
+								}
+								blockoverride "onclick" {
+									onclick = "[GetVariableSystem.Toggle('show_subig_religious')]"
+								}
+								blockoverride "onclick_showless" {
+									visible = "[Not(GetVariableSystem.Exists('show_subig_religious'))]"
+								}
+								blockoverride "onclick_showmore" {
+									visible = "[GetVariableSystem.Exists('show_subig_religious')]"
+								}
+							}
+							flowcontainer = {# SUB IG system
+								visible = "[GetVariableSystem.Exists('show_subig_religious')]"
+								margin = { 10 10 }
+								direction = vertical
+								spacing = 10
+								background = {
+									using = dropdown_background
+
+									modify_texture = {
+										texture = "gfx/interface/masks/fade_horizontal_center.dds"
+										spriteType = Corneredstretched
+										spriteborder = { 0 0 }
+										blend_mode = alphamultiply
 									}
 								}
 								flowcontainer = {
+									direction = horizontal
+									spacing = 20
 									margin = { 60 10 }
 									background = {
 										using = dropdown_background
@@ -621,12 +818,832 @@ types information_panels_types
 									textbox = {
 										#layoutpolicy_horizontal = expanding
 										size = { 0 30 }
-										raw_text = "#v [InterestGroup.GetNameNoFormatting]#!"
+										raw_text = "#v Devout Communities#! - 20%"
 										align = left|nobaseline
 										autoresize = yes
 										using = fontsize_large
 										block "highlight_name" {}
 										elide = right
+									}
+									widget = {
+										size = { 30 30 }
+										character_portrait_medium = {
+											scale = 0.7
+											datacontext = "[InterestGroup.AccessLeader]"
+											using = tooltip_above
+											blockoverride "show_hat" {}
+											parentanchor = vcenter
+											blockoverride "highlight" {}
+										}
+									}
+								}
+								flowcontainer = {
+									direction = horizontal
+									spacing = 20
+									margin = { 60 10 }
+									background = {
+										using = dropdown_background
+									}
+									textbox = {
+										#layoutpolicy_horizontal = expanding
+										size = { 0 30 }
+										raw_text = "#v Clergy#! - 20%"
+										align = left|nobaseline
+										autoresize = yes
+										using = fontsize_large
+										block "highlight_name" {}
+										elide = right
+									}
+									widget = {
+										size = { 30 30 }
+										character_portrait_medium = {
+											scale = 0.7
+											datacontext = "[InterestGroup.AccessLeader]"
+											using = tooltip_above
+											blockoverride "show_hat" {}
+											parentanchor = vcenter
+											blockoverride "highlight" {}
+										}
+									}
+									
+								}
+								flowcontainer = {
+									direction = horizontal
+									spacing = 20
+									margin = { 60 10 }
+									background = {
+										using = dropdown_background
+									}
+									textbox = {
+										#layoutpolicy_horizontal = expanding
+										size = { 0 30 }
+										raw_text = "#v Fundamentalists#! - 20%"
+										align = left|nobaseline
+										autoresize = yes
+										using = fontsize_large
+										block "highlight_name" {}
+										elide = right
+									}
+									widget = {
+										size = { 30 30 }
+										character_portrait_medium = {
+											scale = 0.7
+											datacontext = "[InterestGroup.AccessLeader]"
+											using = tooltip_above
+											blockoverride "show_hat" {}
+											parentanchor = vcenter
+											blockoverride "highlight" {}
+										}
+									}
+								}
+							}
+						}
+						flowcontainer = { # Elites Subigs
+							visible = "[InterestGroup.MakeScope.Var('elites_sub_ig').IsSet]"
+							direction = vertical
+							section_header_button = { # Text
+								blockoverride "layout" {
+									size = { 400 40 }
+								}
+								blockoverride "left_text" {
+									raw_text = "Groups"
+								}
+								blockoverride "onclick" {
+									onclick = "[GetVariableSystem.Toggle('show_subig_elites')]"
+								}
+								blockoverride "onclick_showless" {
+									visible = "[Not(GetVariableSystem.Exists('show_subig_elites'))]"
+								}
+								blockoverride "onclick_showmore" {
+									visible = "[GetVariableSystem.Exists('show_subig_elites')]"
+								}
+							}
+							flowcontainer = {# SUB IG system
+								visible = "[GetVariableSystem.Exists('show_subig_elites')]"
+								margin = { 10 10 }
+								direction = vertical
+								spacing = 10
+								background = {
+									using = dropdown_background
+
+									modify_texture = {
+										texture = "gfx/interface/masks/fade_horizontal_center.dds"
+										spriteType = Corneredstretched
+										spriteborder = { 0 0 }
+										blend_mode = alphamultiply
+									}
+								}
+								flowcontainer = {
+									direction = horizontal
+									spacing = 20
+									margin = { 60 10 }
+									background = {
+										using = dropdown_background
+									}
+									textbox = {
+										#layoutpolicy_horizontal = expanding
+										size = { 0 30 }
+										raw_text = "#v Political Elite#! - 20%"
+										align = left|nobaseline
+										autoresize = yes
+										using = fontsize_large
+										block "highlight_name" {}
+										elide = right
+									}
+									widget = {
+										size = { 30 30 }
+										character_portrait_medium = {
+											scale = 0.7
+											datacontext = "[InterestGroup.AccessLeader]"
+											using = tooltip_above
+											blockoverride "show_hat" {}
+											parentanchor = vcenter
+											blockoverride "highlight" {}
+										}
+									}
+								}
+								flowcontainer = {
+									direction = horizontal
+									spacing = 20
+									margin = { 60 10 }
+									background = {
+										using = dropdown_background
+									}
+									textbox = {
+										#layoutpolicy_horizontal = expanding
+										size = { 0 30 }
+										raw_text = "#v Landed Elite#! - 20%"
+										align = left|nobaseline
+										autoresize = yes
+										using = fontsize_large
+										block "highlight_name" {}
+										elide = right
+									}
+									widget = {
+										size = { 30 30 }
+										character_portrait_medium = {
+											scale = 0.7
+											datacontext = "[InterestGroup.AccessLeader]"
+											using = tooltip_above
+											blockoverride "show_hat" {}
+											parentanchor = vcenter
+											blockoverride "highlight" {}
+										}
+									}
+									
+								}
+								flowcontainer = {
+									direction = horizontal
+									spacing = 20
+									margin = { 60 10 }
+									background = {
+										using = dropdown_background
+									}
+									textbox = {
+										#layoutpolicy_horizontal = expanding
+										size = { 0 30 }
+										raw_text = "#v Oligarchs#! - 20%"
+										align = left|nobaseline
+										autoresize = yes
+										using = fontsize_large
+										block "highlight_name" {}
+										elide = right
+									}
+									widget = {
+										size = { 30 30 }
+										character_portrait_medium = {
+											scale = 0.7
+											datacontext = "[InterestGroup.AccessLeader]"
+											using = tooltip_above
+											blockoverride "show_hat" {}
+											parentanchor = vcenter
+											blockoverride "highlight" {}
+										}
+									}
+								}
+							}
+						}
+						flowcontainer = { # Corporations Subigs
+							visible = "[InterestGroup.MakeScope.Var('corporations_sub_ig').IsSet]"
+							direction = vertical
+							section_header_button = { # Text
+								blockoverride "layout" {
+									size = { 400 40 }
+								}
+								blockoverride "left_text" {
+									raw_text = "Groups"
+								}
+								blockoverride "onclick" {
+									onclick = "[GetVariableSystem.Toggle('show_subig_corporations')]"
+								}
+								blockoverride "onclick_showless" {
+									visible = "[Not(GetVariableSystem.Exists('show_subig_corporations'))]"
+								}
+								blockoverride "onclick_showmore" {
+									visible = "[GetVariableSystem.Exists('show_subig_corporations')]"
+								}
+							}
+							flowcontainer = {# SUB IG system
+								visible = "[GetVariableSystem.Exists('show_subig_corporations')]"
+								margin = { 10 10 }
+								direction = vertical
+								spacing = 10
+								background = {
+									using = dropdown_background
+
+									modify_texture = {
+										texture = "gfx/interface/masks/fade_horizontal_center.dds"
+										spriteType = Corneredstretched
+										spriteborder = { 0 0 }
+										blend_mode = alphamultiply
+									}
+								}
+								flowcontainer = {
+									direction = horizontal
+									spacing = 20
+									margin = { 60 10 }
+									background = {
+										using = dropdown_background
+									}
+									textbox = {
+										#layoutpolicy_horizontal = expanding
+										size = { 0 30 }
+										raw_text = "#v Manufacturing Industrialists#! - 20%"
+										align = left|nobaseline
+										autoresize = yes
+										using = fontsize_large
+										block "highlight_name" {}
+										elide = right
+									}
+									widget = {
+										size = { 30 30 }
+										character_portrait_medium = {
+											scale = 0.7
+											datacontext = "[InterestGroup.AccessLeader]"
+											using = tooltip_above
+											blockoverride "show_hat" {}
+											parentanchor = vcenter
+											blockoverride "highlight" {}
+										}
+									}
+								}
+								flowcontainer = {
+									direction = horizontal
+									spacing = 20
+									margin = { 60 10 }
+									background = {
+										using = dropdown_background
+									}
+									textbox = {
+										#layoutpolicy_horizontal = expanding
+										size = { 0 30 }
+										raw_text = "#v Service Industries#! - 20%"
+										align = left|nobaseline
+										autoresize = yes
+										using = fontsize_large
+										block "highlight_name" {}
+										elide = right
+									}
+									widget = {
+										size = { 30 30 }
+										character_portrait_medium = {
+											scale = 0.7
+											datacontext = "[InterestGroup.AccessLeader]"
+											using = tooltip_above
+											blockoverride "show_hat" {}
+											parentanchor = vcenter
+											blockoverride "highlight" {}
+										}
+									}
+									
+								}
+								flowcontainer = {
+									direction = horizontal
+									spacing = 20
+									margin = { 60 10 }
+									background = {
+										using = dropdown_background
+									}
+									textbox = {
+										#layoutpolicy_horizontal = expanding
+										size = { 0 30 }
+										raw_text = "#v Innovative Industries#! - 20%"
+										align = left|nobaseline
+										autoresize = yes
+										using = fontsize_large
+										block "highlight_name" {}
+										elide = right
+									}
+									widget = {
+										size = { 30 30 }
+										character_portrait_medium = {
+											scale = 0.7
+											datacontext = "[InterestGroup.AccessLeader]"
+											using = tooltip_above
+											blockoverride "show_hat" {}
+											parentanchor = vcenter
+											blockoverride "highlight" {}
+										}
+									}
+								}
+							}
+						}
+						flowcontainer = { # Educated Professionals Subigs
+							visible = "[InterestGroup.MakeScope.Var('educated_sub_ig').IsSet]"
+							direction = vertical
+							section_header_button = { # Text
+								blockoverride "layout" {
+									size = { 400 40 }
+								}
+								blockoverride "left_text" {
+									raw_text = "Groups"
+								}
+								blockoverride "onclick" {
+									onclick = "[GetVariableSystem.Toggle('show_subig_educated')]"
+								}
+								blockoverride "onclick_showless" {
+									visible = "[Not(GetVariableSystem.Exists('show_subig_educated'))]"
+								}
+								blockoverride "onclick_showmore" {
+									visible = "[GetVariableSystem.Exists('show_subig_educated')]"
+								}
+							}
+							flowcontainer = {# SUB IG system
+								visible = "[GetVariableSystem.Exists('show_subig_educated')]"
+								margin = { 10 10 }
+								direction = vertical
+								spacing = 10
+								background = {
+									using = dropdown_background
+
+									modify_texture = {
+										texture = "gfx/interface/masks/fade_horizontal_center.dds"
+										spriteType = Corneredstretched
+										spriteborder = { 0 0 }
+										blend_mode = alphamultiply
+									}
+								}
+								flowcontainer = {
+									direction = horizontal
+									spacing = 20
+									margin = { 60 10 }
+									background = {
+										using = dropdown_background
+									}
+									textbox = {
+										#layoutpolicy_horizontal = expanding
+										size = { 0 30 }
+										raw_text = "#v Academics#! - 20%"
+										align = left|nobaseline
+										autoresize = yes
+										using = fontsize_large
+										block "highlight_name" {}
+										elide = right
+									}
+									widget = {
+										size = { 30 30 }
+										character_portrait_medium = {
+											scale = 0.7
+											datacontext = "[InterestGroup.AccessLeader]"
+											using = tooltip_above
+											blockoverride "show_hat" {}
+											parentanchor = vcenter
+											blockoverride "highlight" {}
+										}
+									}
+								}
+								flowcontainer = {
+									direction = horizontal
+									spacing = 20
+									margin = { 60 10 }
+									background = {
+										using = dropdown_background
+									}
+									textbox = {
+										#layoutpolicy_horizontal = expanding
+										size = { 0 30 }
+										raw_text = "#v Urban Professionals#! - 20%"
+										align = left|nobaseline
+										autoresize = yes
+										using = fontsize_large
+										block "highlight_name" {}
+										elide = right
+									}
+									widget = {
+										size = { 30 30 }
+										character_portrait_medium = {
+											scale = 0.7
+											datacontext = "[InterestGroup.AccessLeader]"
+											using = tooltip_above
+											blockoverride "show_hat" {}
+											parentanchor = vcenter
+											blockoverride "highlight" {}
+										}
+									}
+									
+								}
+								flowcontainer = {
+									direction = horizontal
+									spacing = 20
+									margin = { 60 10 }
+									background = {
+										using = dropdown_background
+									}
+									textbox = {
+										#layoutpolicy_horizontal = expanding
+										size = { 0 30 }
+										raw_text = "#v Scientific Professionals#! - 20%"
+										align = left|nobaseline
+										autoresize = yes
+										using = fontsize_large
+										block "highlight_name" {}
+										elide = right
+									}
+									widget = {
+										size = { 30 30 }
+										character_portrait_medium = {
+											scale = 0.7
+											datacontext = "[InterestGroup.AccessLeader]"
+											using = tooltip_above
+											blockoverride "show_hat" {}
+											parentanchor = vcenter
+											blockoverride "highlight" {}
+										}
+									}
+								}
+							}
+						}
+						flowcontainer = { # Rural Communities Subigs
+							visible = "[InterestGroup.MakeScope.Var('rural_sub_ig').IsSet]"
+							direction = vertical
+							section_header_button = { # Text
+								blockoverride "layout" {
+									size = { 400 40 }
+								}
+								blockoverride "left_text" {
+									raw_text = "Groups"
+								}
+								blockoverride "onclick" {
+									onclick = "[GetVariableSystem.Toggle('show_subig_rural')]"
+								}
+								blockoverride "onclick_showless" {
+									visible = "[Not(GetVariableSystem.Exists('show_subig_rural'))]"
+								}
+								blockoverride "onclick_showmore" {
+									visible = "[GetVariableSystem.Exists('show_subig_rural')]"
+								}
+							}
+							flowcontainer = {# SUB IG system
+								visible = "[GetVariableSystem.Exists('show_subig_rural')]"
+								margin = { 10 10 }
+								direction = vertical
+								spacing = 10
+								background = {
+									using = dropdown_background
+
+									modify_texture = {
+										texture = "gfx/interface/masks/fade_horizontal_center.dds"
+										spriteType = Corneredstretched
+										spriteborder = { 0 0 }
+										blend_mode = alphamultiply
+									}
+								}
+								flowcontainer = {
+									direction = horizontal
+									spacing = 20
+									margin = { 60 10 }
+									background = {
+										using = dropdown_background
+									}
+									textbox = {
+										#layoutpolicy_horizontal = expanding
+										size = { 0 30 }
+										raw_text = "#v Agricultural Businesses#! - 20%"
+										align = left|nobaseline
+										autoresize = yes
+										using = fontsize_large
+										block "highlight_name" {}
+										elide = right
+									}
+									widget = {
+										size = { 30 30 }
+										character_portrait_medium = {
+											scale = 0.7
+											datacontext = "[InterestGroup.AccessLeader]"
+											using = tooltip_above
+											blockoverride "show_hat" {}
+											parentanchor = vcenter
+											blockoverride "highlight" {}
+										}
+									}
+								}
+								flowcontainer = {
+									direction = horizontal
+									spacing = 20
+									margin = { 60 10 }
+									background = {
+										using = dropdown_background
+									}
+									textbox = {
+										#layoutpolicy_horizontal = expanding
+										size = { 0 30 }
+										raw_text = "#v Small Farmers#! - 20%"
+										align = left|nobaseline
+										autoresize = yes
+										using = fontsize_large
+										block "highlight_name" {}
+										elide = right
+									}
+									widget = {
+										size = { 30 30 }
+										character_portrait_medium = {
+											scale = 0.7
+											datacontext = "[InterestGroup.AccessLeader]"
+											using = tooltip_above
+											blockoverride "show_hat" {}
+											parentanchor = vcenter
+											blockoverride "highlight" {}
+										}
+									}
+									
+								}
+								flowcontainer = {
+									direction = horizontal
+									spacing = 20
+									margin = { 60 10 }
+									background = {
+										using = dropdown_background
+									}
+									textbox = {
+										#layoutpolicy_horizontal = expanding
+										size = { 0 30 }
+										raw_text = "#v Revolutionary Rural Groups#! - 20%"
+										align = left|nobaseline
+										autoresize = yes
+										using = fontsize_large
+										block "highlight_name" {}
+										elide = right
+									}
+									widget = {
+										size = { 30 30 }
+										character_portrait_medium = {
+											scale = 0.7
+											datacontext = "[InterestGroup.AccessLeader]"
+											using = tooltip_above
+											blockoverride "show_hat" {}
+											parentanchor = vcenter
+											blockoverride "highlight" {}
+										}
+									}
+								}
+							}
+						}
+						flowcontainer = { # State Employees Subigs
+							visible = "[InterestGroup.MakeScope.Var('state_sub_ig').IsSet]"
+							direction = vertical
+							section_header_button = { # Text
+								blockoverride "layout" {
+									size = { 400 40 }
+								}
+								blockoverride "left_text" {
+									raw_text = "Groups"
+								}
+								blockoverride "onclick" {
+									onclick = "[GetVariableSystem.Toggle('show_subig_state')]"
+								}
+								blockoverride "onclick_showless" {
+									visible = "[Not(GetVariableSystem.Exists('show_subig_state'))]"
+								}
+								blockoverride "onclick_showmore" {
+									visible = "[GetVariableSystem.Exists('show_subig_state')]"
+								}
+							}
+							flowcontainer = {# SUB IG system
+								visible = "[GetVariableSystem.Exists('show_subig_state')]"
+								margin = { 10 10 }
+								direction = vertical
+								spacing = 10
+								background = {
+									using = dropdown_background
+
+									modify_texture = {
+										texture = "gfx/interface/masks/fade_horizontal_center.dds"
+										spriteType = Corneredstretched
+										spriteborder = { 0 0 }
+										blend_mode = alphamultiply
+									}
+								}
+								flowcontainer = {
+									direction = horizontal
+									spacing = 20
+									margin = { 60 10 }
+									background = {
+										using = dropdown_background
+									}
+									textbox = {
+										#layoutpolicy_horizontal = expanding
+										size = { 0 30 }
+										raw_text = "#v Civil Service#! - 20%"
+										align = left|nobaseline
+										autoresize = yes
+										using = fontsize_large
+										block "highlight_name" {}
+										elide = right
+									}
+									widget = {
+										size = { 30 30 }
+										character_portrait_medium = {
+											scale = 0.7
+											datacontext = "[InterestGroup.AccessLeader]"
+											using = tooltip_above
+											blockoverride "show_hat" {}
+											parentanchor = vcenter
+											blockoverride "highlight" {}
+										}
+									}
+								}
+								flowcontainer = {
+									direction = horizontal
+									spacing = 20
+									margin = { 60 10 }
+									background = {
+										using = dropdown_background
+									}
+									textbox = {
+										#layoutpolicy_horizontal = expanding
+										size = { 0 30 }
+										raw_text = "#v Public Sector Workers#! - 20%"
+										align = left|nobaseline
+										autoresize = yes
+										using = fontsize_large
+										block "highlight_name" {}
+										elide = right
+									}
+									widget = {
+										size = { 30 30 }
+										character_portrait_medium = {
+											scale = 0.7
+											datacontext = "[InterestGroup.AccessLeader]"
+											using = tooltip_above
+											blockoverride "show_hat" {}
+											parentanchor = vcenter
+											blockoverride "highlight" {}
+										}
+									}
+									
+								}
+								flowcontainer = {
+									direction = horizontal
+									spacing = 20
+									margin = { 60 10 }
+									background = {
+										using = dropdown_background
+									}
+									textbox = {
+										#layoutpolicy_horizontal = expanding
+										size = { 0 30 }
+										raw_text = "#v Security Services#! - 20%"
+										align = left|nobaseline
+										autoresize = yes
+										using = fontsize_large
+										block "highlight_name" {}
+										elide = right
+									}
+									widget = {
+										size = { 30 30 }
+										character_portrait_medium = {
+											scale = 0.7
+											datacontext = "[InterestGroup.AccessLeader]"
+											using = tooltip_above
+											blockoverride "show_hat" {}
+											parentanchor = vcenter
+											blockoverride "highlight" {}
+										}
+									}
+								}
+							}
+						}
+						flowcontainer = { # Workers Subigs
+							visible = "[InterestGroup.MakeScope.Var('workers_sub_ig').IsSet]"
+							direction = vertical
+							section_header_button = { # Text
+								blockoverride "layout" {
+									size = { 400 40 }
+								}
+								blockoverride "left_text" {
+									raw_text = "Groups"
+								}
+								blockoverride "onclick" {
+									onclick = "[GetVariableSystem.Toggle('show_subig_workers')]"
+								}
+								blockoverride "onclick_showless" {
+									visible = "[Not(GetVariableSystem.Exists('show_subig_workers'))]"
+								}
+								blockoverride "onclick_showmore" {
+									visible = "[GetVariableSystem.Exists('show_subig_workers')]"
+								}
+							}
+							flowcontainer = {# SUB IG system
+								visible = "[GetVariableSystem.Exists('show_subig_workers')]"
+								margin = { 10 10 }
+								direction = vertical
+								spacing = 10
+								background = {
+									using = dropdown_background
+
+									modify_texture = {
+										texture = "gfx/interface/masks/fade_horizontal_center.dds"
+										spriteType = Corneredstretched
+										spriteborder = { 0 0 }
+										blend_mode = alphamultiply
+									}
+								}
+								flowcontainer = {
+									direction = horizontal
+									spacing = 20
+									margin = { 60 10 }
+									background = {
+										using = dropdown_background
+									}
+									textbox = {
+										#layoutpolicy_horizontal = expanding
+										size = { 0 30 }
+										raw_text = "#v Democratic Workers#! - 20%"
+										align = left|nobaseline
+										autoresize = yes
+										using = fontsize_large
+										block "highlight_name" {}
+										elide = right
+									}
+									widget = {
+										size = { 30 30 }
+										character_portrait_medium = {
+											scale = 0.7
+											datacontext = "[InterestGroup.AccessLeader]"
+											using = tooltip_above
+											blockoverride "show_hat" {}
+											parentanchor = vcenter
+											blockoverride "highlight" {}
+										}
+									}
+								}
+								flowcontainer = {
+									direction = horizontal
+									spacing = 20
+									margin = { 60 10 }
+									background = {
+										using = dropdown_background
+									}
+									textbox = {
+										#layoutpolicy_horizontal = expanding
+										size = { 0 30 }
+										raw_text = "#v Trade Unionists#! - 20%"
+										align = left|nobaseline
+										autoresize = yes
+										using = fontsize_large
+										block "highlight_name" {}
+										elide = right
+									}
+									widget = {
+										size = { 30 30 }
+										character_portrait_medium = {
+											scale = 0.7
+											datacontext = "[InterestGroup.AccessLeader]"
+											using = tooltip_above
+											blockoverride "show_hat" {}
+											parentanchor = vcenter
+											blockoverride "highlight" {}
+										}
+									}
+									
+								}
+								flowcontainer = {
+									direction = horizontal
+									spacing = 20
+									margin = { 60 10 }
+									background = {
+										using = dropdown_background
+									}
+									textbox = {
+										#layoutpolicy_horizontal = expanding
+										size = { 0 30 }
+										raw_text = "#v Revolutionary Workers#! - 20%"
+										align = left|nobaseline
+										autoresize = yes
+										using = fontsize_large
+										block "highlight_name" {}
+										elide = right
+									}
+									widget = {
+										size = { 30 30 }
+										character_portrait_medium = {
+											scale = 0.7
+											datacontext = "[InterestGroup.AccessLeader]"
+											using = tooltip_above
+											blockoverride "show_hat" {}
+											parentanchor = vcenter
+											blockoverride "highlight" {}
+										}
 									}
 								}
 							}
