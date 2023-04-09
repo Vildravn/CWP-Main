@@ -42,11 +42,11 @@ manufacturing_industrialists_value = {
 }
 
 service_industries_value = {
-	value = var:innovative_industries_leader.popularity
+	value = var:service_industries_leader.popularity
 }
 
 innovative_industries_value = {
-	value = var:political_elite_leader.popularity
+	value = var:innovative_industries_leader.popularity
 }
 ##### Petty Bourgouisie #####
 middle_class_workers_value = {

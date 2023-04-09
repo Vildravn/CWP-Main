@@ -1,6 +1,5 @@
 ﻿namespace = sub_ig_assignment
-
-#Give Vice President Variable and Character
+#	Assigns leader to SUB-IGs
 ############################# ARMED FORCES #############################
 sub_ig_assignment.1 = { # Juntaists
 	type = country_event
