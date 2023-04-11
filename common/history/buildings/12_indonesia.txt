@@ -297,7 +297,7 @@
 				}
 			}
 			create_building = {
-				building = building_conventional_oil_well
+				building = building_oil_rig
 				level = 5
 				reserves = 1
 				activate_production_methods = {
@@ -394,7 +394,7 @@
 				}
 			}
 			create_building = {
-				building = building_conventional_oil_well
+				building = building_oil_rig
 				level = 3
 				reserves = 1
 				activate_production_methods = {
@@ -513,7 +513,7 @@
 				}
 			}
 			create_building = {
-				building = building_conventional_oil_well
+				building = building_oil_rig
 				level = 3
 				reserves = 1
 				activate_production_methods = {
@@ -707,17 +707,6 @@
 				}
 			}
 			create_building = {
-				building = building_dye_plantation
-				level = 1
-				reserves = 1
-				activate_production_methods = {
-					pm_default_building_dye_plantation
-					pm_manual_harvesting_plantation
-					pm_no_transport_plantation
-					pm_privately_owned_plantation
-				}
-			}
-			create_building = {
 				building = building_livestock_ranch
 				level = 5
 				reserves = 1
@@ -805,17 +794,6 @@
 				}
 			}
 			create_building = {
-				building = building_dye_plantation
-				level = 4
-				reserves = 1
-				activate_production_methods = {
-					pm_default_building_dye_plantation
-					pm_manual_harvesting_plantation
-					pm_no_transport_plantation
-					pm_privately_owned_plantation
-				}
-			}
-			create_building = {
 				building = building_livestock_ranch
 				level = 5
 				reserves = 1
@@ -828,7 +806,7 @@
 				}
 			}
 			create_building = {
-				building = building_conventional_oil_well
+				building = building_oil_rig
 				level = 4
 				reserves = 1
 				activate_production_methods = {
@@ -913,17 +891,6 @@
 				}
 			}
 			create_building = {
-				building = building_dye_plantation
-				level = 2
-				reserves = 1
-				activate_production_methods = {
-					pm_default_building_dye_plantation
-					pm_manual_harvesting_plantation
-					pm_no_transport_plantation
-					pm_privately_owned_plantation
-				}
-			}
-			create_building = {
 				building = building_livestock_ranch
 				level = 5
 				reserves = 1
@@ -936,7 +903,7 @@
 				}
 			}
 			create_building = {
-				building = building_conventional_oil_well
+				building = building_oil_rig
 				level = 3
 				reserves = 1
 				activate_production_methods = {
@@ -1383,17 +1350,6 @@
 					pm_anchorage
 				}
 			}
-			create_building = {
-				building = building_dye_plantation
-				level = 1
-				reserves = 1
-				activate_production_methods = {
-					pm_default_building_dye_plantation
-					pm_manual_harvesting_plantation
-					pm_no_transport_plantation
-					pm_privately_owned_plantation
-				}
-			}
 		}
 		region_state:IDS = {
 			create_building = {
@@ -1760,17 +1716,6 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_default_building_cotton_plantation
-					pm_manual_harvesting_plantation
-					pm_no_transport_plantation
-					pm_privately_owned_plantation
-				}
-			}
-			create_building = {
-				building = building_dye_plantation
-				level = 1
-				reserves = 1
-				activate_production_methods = {
-					pm_default_building_dye_plantation
 					pm_manual_harvesting_plantation
 					pm_no_transport_plantation
 					pm_privately_owned_plantation

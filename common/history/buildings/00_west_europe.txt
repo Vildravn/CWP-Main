@@ -39,7 +39,6 @@
 				activate_production_methods = {
 					pm_pre_war_fertilizer_plant
 					pm_privately_owned_industry
-					pm_coal_tar_dyes
 					pm_professional_service_industry_no
 					pm_no_environmental_tech
 					pm_powered_assembly_lines_industry
@@ -441,7 +440,6 @@
 					pm_powered_assembly_lines_industry
 					pm_professional_service_industry_no
 					pm_no_environmental_tech
-					pm_no_synthetic_dye
 				}
 			}
 			create_building = {
@@ -925,7 +923,6 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_privately_owned_industry
-					pm_no_synthetic_dye
 					pm_no_automation
 					pm_professional_service_industry_no
 					pm_no_environmental_tech
@@ -2178,7 +2175,6 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_privately_owned_industry
-					pm_no_synthetic_dye
 					pm_no_automation
 					pm_professional_service_industry_no
 					pm_no_environmental_tech
@@ -2711,7 +2707,7 @@
 				}
 			}
 			create_building = {
-				building = building_conventional_oil_well
+				building = building_oil_rig
 				level = 3
 				reserves = 1
 				activate_production_methods = {
@@ -2866,7 +2862,6 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_organophosphates_fertilizer
-					pm_no_synthetic_dye
 					pm_privately_owned_industry
 					pm_professional_service_industry_no
 					pm_no_environmental_tech
@@ -3065,7 +3060,6 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_organophosphates_fertilizer
-					pm_no_synthetic_dye
 					pm_privately_owned_industry
 					pm_professional_service_industry_no
 					pm_no_environmental_tech
@@ -4476,7 +4470,6 @@
 					pm_powered_assembly_lines_industry
 					pm_professional_service_industry_no
 					pm_no_environmental_tech
-					pm_coal_tar_dyes
 				}
 			}
 			create_building = {
@@ -4600,6 +4593,94 @@
 					pm_combat_medics
 				}
 			}
+			create_building = {
+				building = building_livestock_ranch
+				level = 3
+				reserves = 1
+				activate_production_methods = {
+					pm_open_air_stockyards
+					pm_slaughterhouses
+					pm_standard_fences
+					pm_unrefrigerated
+					pm_privately_owned_farm
+				}
+			}
+			create_building = {
+				building = building_government_administration
+				level = 5
+				reserves = 1
+				activate_production_methods = {
+					pm_modern_bureaucracy
+					pm_professional_bureaucrats
+				}
+			}
+			create_building = {
+				building = building_iron_mine
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					pm_heavy_equipment_extraction_iron
+					pm_power_tools_iron
+					pm_manual_transportation
+					pm_privately_owned_mine
+				}
+			}
+			create_building = {
+				building = building_hospitals
+				level = 1
+				subsidized = yes
+				reserves = 1
+				activate_production_methods = {
+					pm_trauma_centers
+					pm_antibiotics
+					pm_professional_service_industry_no
+					pm_privatized_hospital
+				}
+			}
+			create_building = {
+				building = building_infrastructure
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					pm_steam_trains
+					pm_government_run_building_infrastructure
+					pm_paved_roads
+					pm_no_passenger_trains
+				}
+			}
+			create_building = {
+				building = building_explosives_industry
+				level = 1
+				subsidized = yes
+				reserves = 1
+				activate_production_methods = {
+					pm_teflon_chemicals
+					pm_pre_war_ammunition
+					pm_powered_assembly_lines_industry
+					pm_professional_service_industry_no
+					pm_no_environmental_tech
+					pm_privately_owned_industry
+				}
+			}
+			create_building = {
+				building = building_fishing_wharf
+				level = 3
+				reserves = 1
+				activate_production_methods = {
+					pm_simple_fishing
+					pm_pre_war_whaling_ships
+					pm_traditional_packaging_fishing
+					pm_privately_owned_misc
+				}
+			}
+			create_building = {
+				building = building_construction_sector
+				level = 2
+				reserves = 1
+				activate_production_methods = {
+					pm_prefabricated_buildings
+				}
+			}
 		}
 	}
 	s:STATE_LOWLANDS = {
@@ -4610,7 +4691,6 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_organophosphates_fertilizer
-					pm_no_synthetic_dye
 					pm_powered_assembly_lines_industry
 					pm_professional_service_industry_no
 					pm_no_environmental_tech
@@ -5673,7 +5753,6 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_privately_owned_industry
-					pm_no_synthetic_dye
 					pm_no_automation
 					pm_professional_service_industry_no
 					pm_no_environmental_tech
@@ -6144,7 +6223,6 @@
 				level = 9
 				reserves = 1
 				activate_production_methods = {
-					pm_coal_tar_dyes
 					pm_privately_owned_industry
 					pm_no_automation
 					pm_professional_service_industry_no
@@ -6251,139 +6329,6 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_basic_port
-				}
-			}
-		}
-	}
-	s:STATE_LANGUEDOC = {
-		region_state:FRA = {
-			create_building = {
-				building = building_wheat_farm
-				level = 2
-				reserves = 1
-				activate_production_methods = {
-					pm_organophosphates
-					pm_no_secondary
-					pm_no_honey_production
-					pm_mechanized_harvesting
-					pm_privately_owned_farm
-				}
-			}
-			create_building = {
-				building = building_cotton_plantation
-				level = 14
-				reserves = 1
-				activate_production_methods = {
-					pm_default_building_cotton_plantation
-					pm_mechanized_harvesting_cotton
-					pm_no_transport_plantation
-					pm_privately_owned_plantation
-				}
-			}
-			create_building = {
-				building = building_infrastructure
-				level = 2
-				reserves = 1
-				activate_production_methods = {
-					pm_steam_trains
-					pm_no_passenger_trains
-					pm_paved_roads
-					pm_privately_owned_building_infrastructure
-				}
-			}
-			create_building = {
-				building = building_combustion_plant
-				level = 13
-				reserves = 1
-				activate_production_methods = {
-					pm_coal_fired_plant
-					pm_professional_service_industry_no
-					pm_privately_owned_urban
-				}
-			}
-			create_building = {
-				building = building_government_administration
-				level = 5
-				reserves = 1
-				activate_production_methods = {
-					pm_modern_bureaucracy
-					pm_professional_bureaucrats
-				}
-			}
-			create_building = {
-				building = building_barracks
-				level = 2
-				reserves = 1
-				activate_production_methods = {
-					pm_post_war_infantry
-					pm_pre_war_artillery
-					pm_main_battle_tanks
-					pm_armoured_personnel_carriers
-					pm_no_aircraft
-					pm_no_special_reconnaissance
-					pm_no_communications_support
-					pm_no_formal_medical_support
-				}
-			}
-			create_building = {
-				building = building_small_arms_manufactories
-				level = 1
-				reserves = 1
-				activate_production_methods = {
-					pm_semi_automatic_rifles
-					pm_privately_owned_industry
-					pm_no_automation
-					pm_professional_service_industry_no
-					pm_no_environmental_tech
-					pm_no_artillery
-				}
-			}
-			create_building = {
-				building = building_livestock_ranch
-				level = 1
-				reserves = 1
-				activate_production_methods = {
-					pm_simple_ranch
-					pm_butchering_tools
-					pm_standard_fences
-					pm_unrefrigerated
-					pm_privately_owned_farm
-				}
-			}
-			create_building = {
-				building = building_aluminum_refinery
-				level = 1
-				reserves = 1
-				activate_production_methods = {
-					pm_hall_heroult_process
-					pm_no_automation
-					pm_professional_service_industry_no
-					pm_no_environmental_tech
-					pm_privately_owned_industry
-				}
-			}
-			create_building = {
-				building = building_fuel_refineries
-				level = 3
-				reserves = 1
-				activate_production_methods = {
-					pm_oil_refineries
-					pm_powered_assembly_lines_industry
-					pm_privately_owned_industry
-					pm_professional_service_industry_no
-					pm_no_environmental_tech
-					pm_rudimentary_polymers
-				}
-			}
-			create_building = {
-				building = building_bauxite_mine
-				level = 3
-				reserves = 1
-				activate_production_methods = {
-					pm_privately_owned_mine
-					pm_heavy_equipment_extraction_bauxite
-					pm_manual_transportation
-					pm_power_tools_bauxite
 				}
 			}
 		}
@@ -6702,7 +6647,6 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_privately_owned_industry
-					pm_coal_tar_dyes
 					pm_no_automation
 					pm_professional_service_industry_no
 					pm_no_environmental_tech
@@ -7030,7 +6974,7 @@
 		region_state:FRA = {
 			create_building = {
 				building = building_wheat_farm
-				level = 2
+				level = 13
 				reserves = 1
 				activate_production_methods = {
 					pm_organophosphates
@@ -7041,8 +6985,40 @@
 				}
 			}
 			create_building = {
+				building = building_cotton_plantation
+				level = 14
+				reserves = 1
+				activate_production_methods = {
+					pm_default_building_cotton_plantation
+					pm_mechanized_harvesting_cotton
+					pm_no_transport_plantation
+					pm_privately_owned_plantation
+				}
+			}
+			create_building = {
+				building = building_infrastructure
+				level = 8
+				reserves = 1
+				activate_production_methods = {
+					pm_steam_trains
+					pm_no_passenger_trains
+					pm_paved_roads
+					pm_privately_owned_building_infrastructure
+				}
+			}
+			create_building = {
+				building = building_combustion_plant
+				level = 13
+				reserves = 1
+				activate_production_methods = {
+					pm_coal_fired_plant
+					pm_professional_service_industry_no
+					pm_privately_owned_urban
+				}
+			}
+			create_building = {
 				building = building_government_administration
-				level = 1
+				level = 8
 				reserves = 1
 				activate_production_methods = {
 					pm_modern_bureaucracy
@@ -7051,28 +7027,189 @@
 			}
 			create_building = {
 				building = building_barracks
-				level = 1
+				level = 4
 				reserves = 1
 				activate_production_methods = {
 					pm_post_war_infantry
 					pm_pre_war_artillery
 					pm_main_battle_tanks
-					pm_no_formal_medical_support
+					pm_armoured_personnel_carriers
 					pm_no_aircraft
 					pm_no_special_reconnaissance
 					pm_no_communications_support
-					pm_no_motorised
+					pm_no_formal_medical_support
 				}
 			}
 			create_building = {
-				building = building_infrastructure
+				building = building_small_arms_manufactories
+				level = 4
+				reserves = 1
+				activate_production_methods = {
+					pm_semi_automatic_rifles
+					pm_privately_owned_industry
+					pm_no_automation
+					pm_professional_service_industry_no
+					pm_no_environmental_tech
+					pm_no_artillery
+				}
+			}
+			create_building = {
+				building = building_livestock_ranch
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					pm_simple_ranch
+					pm_butchering_tools
+					pm_standard_fences
+					pm_unrefrigerated
+					pm_privately_owned_farm
+				}
+			}
+			create_building = {
+				building = building_aluminum_refinery
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					pm_hall_heroult_process
+					pm_no_automation
+					pm_professional_service_industry_no
+					pm_no_environmental_tech
+					pm_privately_owned_industry
+				}
+			}
+			create_building = {
+				building = building_fuel_refineries
+				level = 3
+				reserves = 1
+				activate_production_methods = {
+					pm_oil_refineries
+					pm_powered_assembly_lines_industry
+					pm_privately_owned_industry
+					pm_professional_service_industry_no
+					pm_no_environmental_tech
+					pm_rudimentary_polymers
+				}
+			}
+			create_building = {
+				building = building_bauxite_mine
+				level = 3
+				reserves = 1
+				activate_production_methods = {
+					pm_privately_owned_mine
+					pm_heavy_equipment_extraction_bauxite
+					pm_manual_transportation
+					pm_power_tools_bauxite
+				}
+			}
+			create_building = {
+				building = building_construction_sector
+				level = 1
+				reserves = 1
+				activate_production_methods = {
+					pm_prefabricated_buildings
+				}
+			}
+			create_building = {
+				building = building_textile_manufactories
+				level = 8
+				reserves = 1
+				activate_production_methods = {
+					pm_synthetic_fiber_production_textiles
+					pm_powered_assembly_lines_industry
+					pm_professional_service_industry_no
+					pm_no_environmental_tech
+					pm_privately_owned_industry
+				}
+			}
+			create_building = {
+				building = building_combustion_plant
 				level = 2
 				reserves = 1
 				activate_production_methods = {
-					pm_steam_trains
-					pm_no_passenger_trains
-					pm_paved_roads
-					pm_privately_owned_building_infrastructure
+					pm_coal_fired_plant
+					pm_professional_service_industry_no
+					pm_privately_owned_urban
+				}
+			}
+			create_building = {
+				building = building_furniture_manufactories
+				level = 3
+				reserves = 1
+				activate_production_methods = {
+					pm_synthetic_fiber_production_furniture
+					pm_no_household_appliance_manufacturing
+					pm_powered_assembly_lines_industry
+					pm_professional_services_use
+					pm_no_environmental_tech
+					pm_privately_owned_industry
+				}
+			}
+			create_building = {
+				building = building_logging_camp
+				level = 5
+				reserves = 1
+				activate_production_methods = {
+					pm_electric_saw_mills
+					pm_no_equipment
+					pm_manual_transportation
+					pm_privately_owned_misc
+				}
+			}
+			create_building = {
+				building = building_phosphorus_mine
+				level = 11
+				reserves = 1
+				activate_production_methods = {
+					pm_manual_resource_extraction_phosphorus
+					pm_privately_owned_mine
+					pm_manual_transportation
+					pm_power_tools_phosphorus
+				}
+			}
+			create_building = {
+				building = building_lead_mine
+				level = 4
+				reserves = 1
+				activate_production_methods = {
+					pm_privately_owned_mine
+					pm_traditional_tools
+					pm_manual_transportation
+					pm_mechanized_resource_extraction_lead
+				}
+			}
+			create_building = {
+				building = building_hospitals
+				level = 11
+				reserves = 1
+				activate_production_methods = {
+					pm_trauma_centers
+					pm_antibiotics
+					pm_professional_service_industry_no
+					pm_privatized_hospital
+				}
+			}
+			create_building = {
+				building = building_aluminum_refinery
+				level = 3
+				reserves = 1
+				activate_production_methods = {
+					pm_hall_heroult_process
+					pm_no_automation
+					pm_professional_service_industry_no
+					pm_no_environmental_tech
+					pm_privately_owned_industry
+				}
+			}
+			create_building = {
+				building = building_glassworks
+				level = 15
+				reserves = 1
+				activate_production_methods = {
+					pm_pre_war_glassworking
+					pm_powered_assembly_lines_industry
+					pm_professional_services_use
+					pm_no_environmental_tech
+					pm_privately_owned_industry
 				}
 			}
 			create_building = {
@@ -7343,7 +7480,6 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_privately_owned_industry
-					pm_coal_tar_dyes
 					pm_no_automation
 					pm_professional_service_industry_no
 					pm_no_environmental_tech
@@ -7833,181 +7969,6 @@
 			}
 		}
 	}
-	s:STATE_AUVERGNE = {
-		region_state:FRA = {
-			create_building = {
-				building = building_wheat_farm
-				level = 9
-				reserves = 1
-				activate_production_methods = {
-					pm_organophosphates
-					pm_no_secondary
-					pm_no_honey_production
-					pm_mechanized_harvesting
-					pm_privately_owned_farm
-				}
-			}
-			create_building = {
-				building = building_construction_sector
-				level = 1
-				reserves = 1
-				activate_production_methods = {
-					pm_prefabricated_buildings
-				}
-			}
-			create_building = {
-				building = building_textile_manufactories
-				level = 8
-				reserves = 1
-				activate_production_methods = {
-					pm_synthetic_fiber_production_textiles
-					pm_powered_assembly_lines_industry
-					pm_professional_service_industry_no
-					pm_no_environmental_tech
-					pm_privately_owned_industry
-				}
-			}
-			create_building = {
-				building = building_infrastructure
-				level = 4
-				reserves = 1
-				activate_production_methods = {
-					pm_steam_trains
-					pm_no_passenger_trains
-					pm_paved_roads
-					pm_privately_owned_building_infrastructure
-				}
-			}
-			create_building = {
-				building = building_combustion_plant
-				level = 2
-				reserves = 1
-				activate_production_methods = {
-					pm_coal_fired_plant
-					pm_professional_service_industry_no
-					pm_privately_owned_urban
-				}
-			}
-			create_building = {
-				building = building_furniture_manufactories
-				level = 3
-				reserves = 1
-				activate_production_methods = {
-					pm_synthetic_fiber_production_furniture
-					pm_no_household_appliance_manufacturing
-					pm_powered_assembly_lines_industry
-					pm_professional_services_use
-					pm_no_environmental_tech
-					pm_privately_owned_industry
-				}
-			}
-			create_building = {
-				building = building_logging_camp
-				level = 5
-				reserves = 1
-				activate_production_methods = {
-					pm_electric_saw_mills
-					pm_no_equipment
-					pm_manual_transportation
-					pm_privately_owned_misc
-				}
-			}
-			create_building = {
-				building = building_phosphorus_mine
-				level = 11
-				reserves = 1
-				activate_production_methods = {
-					pm_manual_resource_extraction_phosphorus
-					pm_privately_owned_mine
-					pm_manual_transportation
-					pm_power_tools_phosphorus
-				}
-			}
-			create_building = {
-				building = building_government_administration
-				level = 2
-				reserves = 1
-				activate_production_methods = {
-					pm_modern_bureaucracy
-					pm_professional_bureaucrats
-				}
-			}
-			create_building = {
-				building = building_barracks
-				level = 1
-				reserves = 1
-				activate_production_methods = {
-					pm_post_war_infantry
-					pm_pre_war_artillery
-					pm_main_battle_tanks
-					pm_no_motorised
-					pm_no_aircraft
-					pm_no_special_reconnaissance
-					pm_no_communications_support
-					pm_no_formal_medical_support
-				}
-			}
-			create_building = {
-				building = building_small_arms_manufactories
-				level = 3
-				reserves = 1
-				activate_production_methods = {
-					pm_semi_automatic_rifles
-					pm_privately_owned_industry
-					pm_no_automation
-					pm_professional_service_industry_no
-					pm_no_environmental_tech
-					pm_no_artillery
-				}
-			}
-			create_building = {
-				building = building_lead_mine
-				level = 4
-				reserves = 1
-				activate_production_methods = {
-					pm_privately_owned_mine
-					pm_traditional_tools
-					pm_manual_transportation
-					pm_mechanized_resource_extraction_lead
-				}
-			}
-			create_building = {
-				building = building_hospitals
-				level = 11
-				reserves = 1
-				activate_production_methods = {
-					pm_trauma_centers
-					pm_antibiotics
-					pm_professional_service_industry_no
-					pm_privatized_hospital
-				}
-			}
-			create_building = {
-				building = building_aluminum_refinery
-				level = 3
-				reserves = 1
-				activate_production_methods = {
-					pm_hall_heroult_process
-					pm_no_automation
-					pm_professional_service_industry_no
-					pm_no_environmental_tech
-					pm_privately_owned_industry
-				}
-			}
-			create_building = {
-				building = building_glassworks
-				level = 15
-				reserves = 1
-				activate_production_methods = {
-					pm_pre_war_glassworking
-					pm_powered_assembly_lines_industry
-					pm_professional_services_use
-					pm_no_environmental_tech
-					pm_privately_owned_industry
-				}
-			}
-		}
-	}
 	s:STATE_AQUITAINE = {
 		region_state:FRA = {
 			create_building = {
@@ -8244,7 +8205,6 @@
 					pm_no_automation
 					pm_professional_service_industry_no
 					pm_no_environmental_tech
-					pm_no_synthetic_dye
 				}
 			}
 			create_building = {
@@ -8370,7 +8330,6 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_powered_assembly_lines_industry
-					pm_no_synthetic_dye
 					pm_privately_owned_industry
 					pm_professional_service_industry_no
 					pm_no_environmental_tech
@@ -8719,7 +8678,7 @@
 				}
 			}
 			create_building = {
-				building = building_conventional_oil_well
+				building = building_oil_rig
 				level = 8
 				reserves = 1
 				activate_production_methods = {
@@ -9218,7 +9177,6 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_pre_war_fertilizer_plant
-					pm_no_synthetic_dye
 					pm_privately_owned_industry
 					pm_professional_service_industry_no
 					pm_no_environmental_tech
@@ -9397,7 +9355,6 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_pre_war_fertilizer_plant
-					pm_no_synthetic_dye
 					pm_powered_assembly_lines_industry
 					pm_professional_service_industry_no
 					pm_no_environmental_tech
@@ -9793,7 +9750,6 @@
 					pm_no_automation
 					pm_professional_service_industry_no
 					pm_no_environmental_tech
-					pm_coal_tar_dyes
 				}
 			}
 			create_building = {
@@ -10126,7 +10082,6 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_pre_war_fertilizer_plant
-					pm_no_synthetic_dye
 					pm_no_automation
 					pm_professional_service_industry_no
 					pm_no_environmental_tech
@@ -10650,7 +10605,6 @@
 					pm_privately_owned_industry
 					pm_professional_service_industry_no
 					pm_no_environmental_tech
-					pm_coal_tar_dyes
 				}
 			}
 			create_building = {
@@ -10787,7 +10741,7 @@
 				}
 			}
 			create_building = {
-				building = building_conventional_oil_well
+				building = building_oil_rig
 				level = 3
 				reserves = 1
 				activate_production_methods = {
@@ -11081,7 +11035,6 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_pre_war_fertilizer_plant
-					pm_no_synthetic_dye
 					pm_privately_owned_industry
 					pm_professional_service_industry_no
 					pm_no_environmental_tech
@@ -11468,7 +11421,6 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_organophosphates_fertilizer
-					pm_coal_tar_dyes
 					pm_powered_assembly_lines_industry
 					pm_professional_service_industry_no
 					pm_no_environmental_tech
@@ -11699,7 +11651,6 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_organophosphates_fertilizer
-					pm_no_synthetic_dye
 					pm_no_automation
 					pm_professional_service_industry_no
 					pm_no_environmental_tech
@@ -11882,7 +11833,6 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_pre_war_fertilizer_plant
-					pm_no_synthetic_dye
 					pm_no_automation
 					pm_professional_service_industry_no
 					pm_no_environmental_tech
@@ -11977,7 +11927,6 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_organophosphates_fertilizer
-					pm_coal_tar_dyes
 					pm_powered_assembly_lines_industry
 					pm_professional_service_industry_no
 					pm_no_environmental_tech
@@ -12492,7 +12441,6 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_organophosphates_fertilizer
-					pm_no_synthetic_dye
 					pm_government_run_industry
 					pm_professional_service_industry_no
 					pm_no_environmental_tech
@@ -12729,7 +12677,6 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_organophosphates_fertilizer
-					pm_coal_tar_dyes
 					pm_powered_assembly_lines_industry
 					pm_professional_service_industry_no
 					pm_no_environmental_tech
@@ -12936,7 +12883,6 @@
 					pm_no_automation
 					pm_professional_service_industry_no
 					pm_no_environmental_tech
-					pm_no_synthetic_dye
 				}
 			}
 			create_building = {
@@ -13355,7 +13301,7 @@
 				}
 			}
 			create_building = {
-				building = building_conventional_oil_well
+				building = building_oil_rig
 				level = 13
 				reserves = 1
 				activate_production_methods = {
@@ -13552,7 +13498,6 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_organophosphates_fertilizer
-					pm_coal_tar_dyes
 					pm_powered_assembly_lines_industry
 					pm_professional_service_industry_no
 					pm_no_environmental_tech
@@ -13667,7 +13612,7 @@
 				}
 			}
 			create_building = {
-				building = building_conventional_oil_well
+				building = building_oil_rig
 				level = 5
 				reserves = 1
 				activate_production_methods = {
@@ -13992,7 +13937,6 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_organophosphates_fertilizer
-					pm_coal_tar_dyes
 					pm_no_automation
 					pm_professional_service_industry_no
 					pm_no_environmental_tech
@@ -14264,7 +14208,6 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_organophosphates_fertilizer
-					pm_coal_tar_dyes
 					pm_no_automation
 					pm_professional_service_industry_no
 					pm_no_environmental_tech
@@ -14609,7 +14552,6 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_organophosphates_fertilizer
-					pm_no_synthetic_dye
 					pm_no_automation
 					pm_professional_service_industry_no
 					pm_no_environmental_tech
@@ -14865,7 +14807,7 @@
 				}
 			}
 			create_building = {
-				building = building_conventional_oil_well
+				building = building_oil_rig
 				level = 5
 				reserves = 1
 				activate_production_methods = {
@@ -15048,7 +14990,6 @@
 				reserves = 1
 				activate_production_methods = {
 					pm_organophosphates_fertilizer
-					pm_coal_tar_dyes
 					pm_no_automation
 					pm_professional_service_industry_no
 					pm_no_environmental_tech
@@ -15338,98 +15279,6 @@
 			}
 		}
 	}
-	s:STATE_CORNWALL = {
-		region_state:GBR = {
-			create_building = {
-				building = building_livestock_ranch
-				level = 3
-				reserves = 1
-				activate_production_methods = {
-					pm_open_air_stockyards
-					pm_slaughterhouses
-					pm_standard_fences
-					pm_unrefrigerated
-					pm_privately_owned_farm
-				}
-			}
-			create_building = {
-				building = building_government_administration
-				level = 5
-				reserves = 1
-				activate_production_methods = {
-					pm_modern_bureaucracy
-					pm_professional_bureaucrats
-				}
-			}
-			create_building = {
-				building = building_iron_mine
-				level = 1
-				reserves = 1
-				activate_production_methods = {
-					pm_heavy_equipment_extraction_iron
-					pm_power_tools_iron
-					pm_manual_transportation
-					pm_privately_owned_mine
-				}
-			}
-			create_building = {
-				building = building_hospitals
-				level = 1
-				subsidized = yes
-				reserves = 1
-				activate_production_methods = {
-					pm_trauma_centers
-					pm_antibiotics
-					pm_professional_service_industry_no
-					pm_privatized_hospital
-				}
-			}
-			create_building = {
-				building = building_infrastructure
-				level = 1
-				reserves = 1
-				activate_production_methods = {
-					pm_steam_trains
-					pm_government_run_building_infrastructure
-					pm_paved_roads
-					pm_no_passenger_trains
-				}
-			}
-			create_building = {
-				building = building_explosives_industry
-				level = 1
-				subsidized = yes
-				reserves = 1
-				activate_production_methods = {
-					pm_teflon_chemicals
-					pm_pre_war_ammunition
-					pm_powered_assembly_lines_industry
-					pm_professional_service_industry_no
-					pm_no_environmental_tech
-					pm_privately_owned_industry
-				}
-			}
-			create_building = {
-				building = building_fishing_wharf
-				level = 3
-				reserves = 1
-				activate_production_methods = {
-					pm_simple_fishing
-					pm_pre_war_whaling_ships
-					pm_traditional_packaging_fishing
-					pm_privately_owned_misc
-				}
-			}
-			create_building = {
-				building = building_construction_sector
-				level = 2
-				reserves = 1
-				activate_production_methods = {
-					pm_prefabricated_buildings
-				}
-			}
-		}
-	}
 	s:STATE_CHANNEL_ISLANDS = {
 		region_state:GBR = {
 			create_building = {
@@ -15637,7 +15486,6 @@
 					pm_privately_owned_industry
 					pm_professional_service_industry_no
 					pm_no_environmental_tech
-					pm_coal_tar_dyes
 				}
 			}
 			create_building = {
