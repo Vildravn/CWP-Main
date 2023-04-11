@@ -5,42 +5,65 @@ sub_ig_assignment.1 = { # Juntaists
 	type = country_event
 	hidden = yes
 	trigger = {
-		not = { has_variable = juntaists_leader }
+		or = {
+			not = { has_variable = juntaists_leader }
+			and = {
+				has_variable = juntaists_leader
+				not = {
+					any_scope_character = { has_variable = juntaists_leader_check }
+				}
+			}
+		}
+
 	}
 	immediate = {
 		create_character = {
 			interest_group = ig_armed_forces
-			on_created = {
-				set_variable = juntaists_trigger
-				owner = {
-					set_variable = {
-						name = juntaists_leader
-						value = PREV
-					}
-				}
-			}		
+			save_scope_as = juntaists_leader_scope
+		}
+		
+		scope:juntaists_leader_scope = {
+			place_character_in_void = 60
+			set_variable = juntaists_leader_check
+		}
+		
+		set_variable = {
+			name = juntaists_leader
+			value = scope:juntaists_leader_scope
 		}
 	}
 }
+
+
 
 sub_ig_assignment.2 = { # Loyalists
 	type = country_event
 	hidden = yes
 	trigger = {
-		not = { has_variable = loyalists_leader }
+		or = {
+			not = { has_variable = loyalists_leader }
+			and = {
+				has_variable = loyalists_leader
+				not = {
+					any_scope_character = { has_variable = loyalists_leader_check }
+				}
+			}
+		}
 	}
 	immediate = {
 		create_character = {
 			interest_group = ig_armed_forces
-			on_created = {
-				set_variable = loyalists_trigger
-				owner = {
-					set_variable = {
-						name = loyalists_leader
-						value = PREV
-					}
-				}
-			}		
+			save_scope_as = loyalists_leader_scope
+		}
+		
+		scope:loyalists_leader_scope = {
+			place_character_in_void = 60
+			set_variable = loyalists_leader_check
+		}
+		
+		set_variable = {
+			name = loyalists_leader
+			value = scope:loyalists_leader_scope
 		}
 	}
 }
@@ -49,20 +72,30 @@ sub_ig_assignment.3 = { # Militarists
 	type = country_event
 	hidden = yes
 	trigger = {
-		not = { has_variable = militarists_leader }
+		or = {
+			not = { has_variable = militarists_leader }
+			and = {
+				has_variable = militarists_leader
+				not = {
+					any_scope_character = { has_variable = militarists_leader_check }
+				}
+			}
+		}
 	}
 	immediate = {
 		create_character = {
 			interest_group = ig_armed_forces
-			on_created = {
-				set_variable = militarists_trigger
-				owner = {
-					set_variable = {
-						name = militarists_leader
-						value = PREV
-					}
-				}
-			}		
+			save_scope_as = militarists_leader_scope
+		}
+		
+		scope:militarists_leader_scope = {
+			place_character_in_void = 60
+			set_variable = militarists_leader_check
+		}
+		
+		set_variable = {
+			name = militarists_leader
+			value = scope:militarists_leader_scope
 		}
 	}
 }
@@ -71,20 +104,30 @@ sub_ig_assignment.4 = { # Devout Communities
 	type = country_event
 	hidden = yes
 	trigger = {
-		not = { has_variable = devout_leader }
+		or = {
+			not = { has_variable = devout_leader }
+			and = {
+				has_variable = devout_leader
+				not = {
+					any_scope_character = { has_variable = devout_leader_check }
+				}
+			}
+		}
 	}
 	immediate = {
 		create_character = {
 			interest_group = ig_religious_folk
-			on_created = {
-				set_variable = devout_trigger
-				owner = {
-					set_variable = {
-						name = devout_leader
-						value = PREV
-					}
-				}
-			}		
+			save_scope_as = devout_leader_scope
+		}
+		
+		scope:devout_leader_scope = {
+			place_character_in_void = 60
+			set_variable = devout_leader_check
+		}
+		
+		set_variable = {
+			name = devout_leader
+			value = scope:devout_leader_scope
 		}
 	}
 }
@@ -93,20 +136,30 @@ sub_ig_assignment.5 = { # Clergy
 	type = country_event
 	hidden = yes
 	trigger = {
-		not = { has_variable = clergy_leader }
+		or = {
+			not = { has_variable = clergy_leader }
+			and = {
+				has_variable = clergy_leader
+				not = {
+					any_scope_character = { has_variable = clergy_leader_check }
+				}
+			}
+		}
 	}
 	immediate = {
 		create_character = {
 			interest_group = ig_religious_folk
-			on_created = {
-				set_variable = clergy_trigger
-				owner = {
-					set_variable = {
-						name = clergy_leader
-						value = PREV
-					}
-				}
-			}		
+			save_scope_as = clergy_leader_scope
+		}
+		
+		scope:clergy_leader_scope = {
+			place_character_in_void = 60
+			set_variable = clergy_leader_check
+		}
+		
+		set_variable = {
+			name = clergy_leader
+			value = scope:clergy_leader_scope
 		}
 	}
 }
@@ -115,20 +168,30 @@ sub_ig_assignment.6 = { # Fundamentalists
 	type = country_event
 	hidden = yes
 	trigger = {
-		not = { has_variable = fundamentalists_leader }
+		or = {
+			not = { has_variable = fundamentalists_leader }
+			and = {
+				has_variable = fundamentalists_leader
+				not = {
+					any_scope_character = { has_variable = fundamentalists_leader_check }
+				}
+			}
+		}
 	}
 	immediate = {
 		create_character = {
 			interest_group = ig_religious_folk
-			on_created = {
-				set_variable = fundamentalists_trigger
-				owner = {
-					set_variable = {
-						name = fundamentalists_leader
-						value = PREV
-					}
-				}
-			}		
+			save_scope_as = fundamentalists_leader_scope
+		}
+		
+		scope:fundamentalists_leader_scope = {
+			place_character_in_void = 60
+			set_variable = fundamentalists_leader_check
+		}
+		
+		set_variable = {
+			name = fundamentalists_leader
+			value = scope:fundamentalists_leader_scope
 		}
 	}
 }
@@ -137,20 +200,30 @@ sub_ig_assignment.7 = { # Political Elite
 	type = country_event
 	hidden = yes
 	trigger = {
-		not = { has_variable = political_elite_leader }
+		or = {
+			not = { has_variable = political_elite_leader }
+			and = {
+				has_variable = political_elite_leader
+				not = {
+					any_scope_character = { has_variable = political_elite_leader_check }
+				}
+			}
+		}
 	}
 	immediate = {
 		create_character = {
 			interest_group = ig_elites
-			on_created = {
-				set_variable = political_elite_trigger
-				owner = {
-					set_variable = {
-						name = political_elite_leader
-						value = PREV
-					}
-				}
-			}		
+			save_scope_as = political_elite_leader_scope
+		}
+		
+		scope:political_elite_leader_scope = {
+			place_character_in_void = 60
+			set_variable = political_elite_leader_check
+		}
+		
+		set_variable = {
+			name = political_elite_leader
+			value = scope:political_elite_leader_scope
 		}
 	}
 }
@@ -159,20 +232,30 @@ sub_ig_assignment.8 = { # Landed Elite
 	type = country_event
 	hidden = yes
 	trigger = {
-		not = { has_variable = landed_elite_leader }
+		or = {
+			not = { has_variable = landed_elite_leader }
+			and = {
+				has_variable = landed_elite_leader
+				not = {
+					any_scope_character = { has_variable = landed_elite_leader_check }
+				}
+			}
+		}
 	}
 	immediate = {
 		create_character = {
 			interest_group = ig_elites
-			on_created = {
-				set_variable = landed_elite_trigger
-				owner = {
-					set_variable = {
-						name = landed_elite_leader
-						value = PREV
-					}
-				}
-			}		
+			save_scope_as = landed_elite_leader_scope
+		}
+		
+		scope:landed_elite_leader_scope = {
+			place_character_in_void = 60
+			set_variable = landed_elite_leader_check
+		}
+		
+		set_variable = {
+			name = landed_elite_leader
+			value = scope:landed_elite_leader_scope
 		}
 	}
 }
@@ -181,20 +264,30 @@ sub_ig_assignment.9 = { # Oligarchy
 	type = country_event
 	hidden = yes
 	trigger = {
-		not = { has_variable = oligarchy_leader }
+		or = {
+			not = { has_variable = oligarchy_leader }
+			and = {
+				has_variable = oligarchy_leader
+				not = {
+					any_scope_character = { has_variable = oligarchy_leader_check }
+				}
+			}
+		}
 	}
 	immediate = {
 		create_character = {
 			interest_group = ig_elites
-			on_created = {
-				set_variable = oligarchy_trigger
-				owner = {
-					set_variable = {
-						name = oligarchy_leader
-						value = PREV
-					}
-				}
-			}		
+			save_scope_as = oligarchy_leader_scope
+		}
+		
+		scope:oligarchy_leader_scope = {
+			place_character_in_void = 60
+			set_variable = oligarchy_leader_check
+		}
+		
+		set_variable = {
+			name = landed_elite_leader
+			value = scope:oligarchy_leader_scope
 		}
 	}
 }
@@ -209,7 +302,7 @@ sub_ig_assignment.10 = { # Manufacturing Industrialists
 		create_character = {
 			interest_group = ig_corporations
 			on_created = {
-				set_variable = manufacturing_industrialists_trigger
+				set_variable = manufacturing_industrialists_leader_check
 				owner = {
 					set_variable = {
 						name = manufacturing_industrialists_leader
@@ -231,7 +324,7 @@ sub_ig_assignment.11 = { # Service Industries
 		create_character = {
 			interest_group = ig_corporations
 			on_created = {
-				set_variable = service_industries_trigger
+				set_variable = service_industries_leader_check
 				owner = {
 					set_variable = {
 						name = service_industries_leader
@@ -253,7 +346,7 @@ sub_ig_assignment.12 = { # Innovative Industries
 		create_character = {
 			interest_group = ig_corporations
 			on_created = {
-				set_variable = innovative_industries_trigger
+				set_variable = innovative_industries_leader_check
 				owner = {
 					set_variable = {
 						name = innovative_industries_leader
@@ -275,7 +368,7 @@ sub_ig_assignment.13 = { # Middle Class Workers
 		create_character = {
 			interest_group = ig_petty_bourgeoisie
 			on_created = {
-				set_variable = middle_class_workers_trigger
+				set_variable = middle_class_workers_leader_check
 				owner = {
 					set_variable = {
 						name = middle_class_workers_leader
@@ -297,7 +390,7 @@ sub_ig_assignment.14 = { # Small Businesses
 		create_character = {
 			interest_group = ig_petty_bourgeoisie
 			on_created = {
-				set_variable = small_businesses_trigger
+				set_variable = small_businesses_leader_check
 				owner = {
 					set_variable = {
 						name = small_businesses_leader
@@ -319,7 +412,7 @@ sub_ig_assignment.15 = { # Patriots
 		create_character = {
 			interest_group = ig_petty_bourgeoisie
 			on_created = {
-				set_variable = patriots_trigger
+				set_variable = patriots_leader_check
 				owner = {
 					set_variable = {
 						name = patriots_leader
@@ -341,7 +434,7 @@ sub_ig_assignment.16 = { # Academics
 		create_character = {
 			interest_group = ig_educated_professionals
 			on_created = {
-				set_variable = academics_trigger
+				set_variable = academics_leader_check
 				owner = {
 					set_variable = {
 						name = academics_leader
@@ -363,7 +456,7 @@ sub_ig_assignment.17 = { # Urban Professionals
 		create_character = {
 			interest_group = ig_educated_professionals
 			on_created = {
-				set_variable = urban_professionals_trigger
+				set_variable = urban_professionals_leader_check
 				owner = {
 					set_variable = {
 						name = urban_professionals_leader
@@ -385,10 +478,208 @@ sub_ig_assignment.18 = { # Scientific Professionals
 		create_character = {
 			interest_group = ig_educated_professionals
 			on_created = {
-				set_variable = scientific_professionals_trigger
+				set_variable = scientific_professionals_leader_check
 				owner = {
 					set_variable = {
 						name = scientific_professionals_leader
+						value = PREV
+					}
+				}
+			}		
+		}
+	}
+}
+############################# RURAL COMMUNITIES #############################
+sub_ig_assignment.19 = { # Agricultural Businesses
+	type = country_event
+	hidden = yes
+	trigger = {
+		not = { has_variable = agricultural_businesses_leader }
+	}
+	immediate = {
+		create_character = {
+			interest_group = ig_rural_communities
+			on_created = {
+				set_variable = agricultural_businesses_leader_check
+				owner = {
+					set_variable = {
+						name = agricultural_businesses_leader
+						value = PREV
+					}
+				}
+			}		
+		}
+	}
+}
+
+sub_ig_assignment.20 = { # Small Farms
+	type = country_event
+	hidden = yes
+	trigger = {
+		not = { has_variable = small_farms_leader }
+	}
+	immediate = {
+		create_character = {
+			interest_group = ig_rural_communities
+			on_created = {
+				set_variable = small_farms_leader_check
+				owner = {
+					set_variable = {
+						name = small_farms_leader
+						value = PREV
+					}
+				}
+			}		
+		}
+	}
+}
+
+sub_ig_assignment.21 = { # Revolutionary Rural Groups
+	type = country_event
+	hidden = yes
+	trigger = {
+		not = { has_variable = revolutionary_rural_groups_leader }
+	}
+	immediate = {
+		create_character = {
+			interest_group = ig_rural_communities
+			on_created = {
+				set_variable = revolutionary_rural_groups_leader_check
+				owner = {
+					set_variable = {
+						name = revolutionary_rural_groups_leader
+						value = PREV
+					}
+				}
+			}		
+		}
+	}
+}
+############################# STATE EMPLOYEES #############################
+sub_ig_assignment.22 = { # Civil Service
+	type = country_event
+	hidden = yes
+	trigger = {
+		not = { has_variable = civil_service_leader }
+	}
+	immediate = {
+		create_character = {
+			interest_group = ig_state_employees
+			on_created = {
+				set_variable = civil_service_leader_check
+				owner = {
+					set_variable = {
+						name = civil_service_leader
+						value = PREV
+					}
+				}
+			}		
+		}
+	}
+}
+
+sub_ig_assignment.23 = { # Public Sector Workers
+	type = country_event
+	hidden = yes
+	trigger = {
+		not = { has_variable = public_sector_leader }
+	}
+	immediate = {
+		create_character = {
+			interest_group = ig_state_employees
+			on_created = {
+				set_variable = public_sector_leader_check
+				owner = {
+					set_variable = {
+						name = public_sector_leader
+						value = PREV
+					}
+				}
+			}		
+		}
+	}
+}
+
+sub_ig_assignment.24 = { # Security Services
+	type = country_event
+	hidden = yes
+	trigger = {
+		not = { has_variable = security_services_leader }
+	}
+	immediate = {
+		create_character = {
+			interest_group = ig_state_employees
+			on_created = {
+				set_variable = security_services_leader_check
+				owner = {
+					set_variable = {
+						name = security_services_leader
+						value = PREV
+					}
+				}
+			}		
+		}
+	}
+}
+############################# WORKERS #############################
+sub_ig_assignment.25 = { # Democratic Workers
+	type = country_event
+	hidden = yes
+	trigger = {
+		not = { has_variable = democratic_workers_leader }
+	}
+	immediate = {
+		create_character = {
+			interest_group = ig_workers
+			on_created = {
+				set_variable = democratic_workers_leader_check
+				owner = {
+					set_variable = {
+						name = democratic_workers_leader
+						value = PREV
+					}
+				}
+			}		
+		}
+	}
+}
+
+sub_ig_assignment.26 = { # Trade Unionists
+	type = country_event
+	hidden = yes
+	trigger = {
+		not = { has_variable = trade_unionists_leader }
+	}
+	immediate = {
+		create_character = {
+			interest_group = ig_workers
+			on_created = {
+				set_variable = trade_unionists_leader_check
+				owner = {
+					set_variable = {
+						name = trade_unionists_leader
+						value = PREV
+					}
+				}
+			}		
+		}
+	}
+}
+
+sub_ig_assignment.27 = { # Revolutionary Workers
+	type = country_event
+	hidden = yes
+	trigger = {
+		not = { has_variable = revolutionary_workers_leader }
+	}
+	immediate = {
+		create_character = {
+			interest_group = ig_workers
+			on_created = {
+				set_variable = revolutionary_workers_leader_check
+				owner = {
+					set_variable = {
+						name = revolutionary_workers_leader
 						value = PREV
 					}
 				}

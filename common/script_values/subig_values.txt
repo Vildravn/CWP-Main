@@ -74,37 +74,37 @@ scientific_professionals_value = {
 }
 ##### Rural Communities #####
 agricultural_businesses_value = {
-
+	value = var:agricultural_businesses_leader.popularity
 }
 
 small_farms_value = {
-
+	value = var:small_farms_leader.popularity
 }
 
 revolutionary_rural_groups_value = {
-
+	value = var:revolutionary_rural_groups_leader.popularity
 }
 ##### State Employees #####
 civil_service_value = {
-
+	value = var:civil_service_leader.popularity
 }
 
 public_sector_workers_value = {
-
+	value = var:public_sector_leader.popularity
 }
 
 security_services_value = {
-
+	value = var:security_services_leader.popularity
 }
 ##### Workers #####
 democratic_workers_value = {
-
+	value = var:democratic_workers_leader.popularity
 }
 
 trade_unionists_value = {
-
+	value = var:trade_unionists_leader.popularity
 }
 
 revolutionary_workers_value = {
-
+	value = var:revolutionary_workers_leader.popularity
 }
