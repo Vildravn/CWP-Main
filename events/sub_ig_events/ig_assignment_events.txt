@@ -286,7 +286,7 @@ sub_ig_assignment.9 = { # Oligarchy
 		}
 		
 		set_variable = {
-			name = landed_elite_leader
+			name = oligarchy_leader
 			value = scope:oligarchy_leader_scope
 		}
 	}
@@ -296,20 +296,30 @@ sub_ig_assignment.10 = { # Manufacturing Industrialists
 	type = country_event
 	hidden = yes
 	trigger = {
-		not = { has_variable = manufacturing_industrialists_leader }
+		or = {
+			not = { has_variable = manufacturing_industrialists_leader }
+			and = {
+				has_variable = manufacturing_industrialists_leader
+				not = {
+					any_scope_character = { has_variable = manufacturing_industrialists_leader_check }
+				}
+			}
+		}
 	}
 	immediate = {
 		create_character = {
 			interest_group = ig_corporations
-			on_created = {
-				set_variable = manufacturing_industrialists_leader_check
-				owner = {
-					set_variable = {
-						name = manufacturing_industrialists_leader
-						value = PREV
-					}
-				}
-			}		
+			save_scope_as = manufacturing_industrialists_leader_scope
+		}
+		
+		scope:manufacturing_industrialists_leader_scope = {
+			place_character_in_void = 60
+			set_variable = manufacturing_industrialists_leader_check
+		}
+		
+		set_variable = {
+			name = manufacturing_industrialists_leader
+			value = scope:manufacturing_industrialists_leader_scope
 		}
 	}
 }
@@ -318,20 +328,30 @@ sub_ig_assignment.11 = { # Service Industries
 	type = country_event
 	hidden = yes
 	trigger = {
-		not = { has_variable = service_industries_leader }
+		or = {
+			not = { has_variable = service_industries_leader }
+			and = {
+				has_variable = service_industries_leader
+				not = {
+					any_scope_character = { has_variable = service_industries_leader_check }
+				}
+			}
+		}
 	}
 	immediate = {
 		create_character = {
 			interest_group = ig_corporations
-			on_created = {
-				set_variable = service_industries_leader_check
-				owner = {
-					set_variable = {
-						name = service_industries_leader
-						value = PREV
-					}
-				}
-			}		
+			save_scope_as = service_industries_leader_scope
+		}
+		
+		scope:service_industries_leader_scope = {
+			place_character_in_void = 60
+			set_variable = service_industries_leader_check
+		}
+		
+		set_variable = {
+			name = service_industries_leader
+			value = scope:service_industries_leader_scope
 		}
 	}
 }
@@ -340,20 +360,30 @@ sub_ig_assignment.12 = { # Innovative Industries
 	type = country_event
 	hidden = yes
 	trigger = {
-		not = { has_variable = innovative_industries_leader }
+		or = {
+			not = { has_variable = innovative_industries_leader }
+			and = {
+				has_variable = innovative_industries_leader
+				not = {
+					any_scope_character = { has_variable = innovative_industries_leader_check }
+				}
+			}
+		}
 	}
 	immediate = {
 		create_character = {
 			interest_group = ig_corporations
-			on_created = {
-				set_variable = innovative_industries_leader_check
-				owner = {
-					set_variable = {
-						name = innovative_industries_leader
-						value = PREV
-					}
-				}
-			}		
+			save_scope_as = innovative_industries_leader_scope
+		}
+		
+		scope:innovative_industries_leader_scope = {
+			place_character_in_void = 60
+			set_variable = innovative_industries_leader_check
+		}
+		
+		set_variable = {
+			name = innovative_industries_leader
+			value = scope:innovative_industries_leader_scope
 		}
 	}
 }
@@ -362,20 +392,30 @@ sub_ig_assignment.13 = { # Middle Class Workers
 	type = country_event
 	hidden = yes
 	trigger = {
-		not = { has_variable = middle_class_workers_leader }
+		or = {
+			not = { has_variable = middle_class_workers_leader }
+			and = {
+				has_variable = middle_class_workers_leader
+				not = {
+					any_scope_character = { has_variable = middle_class_workers_leader_check }
+				}
+			}
+		}
 	}
 	immediate = {
 		create_character = {
 			interest_group = ig_petty_bourgeoisie
-			on_created = {
-				set_variable = middle_class_workers_leader_check
-				owner = {
-					set_variable = {
-						name = middle_class_workers_leader
-						value = PREV
-					}
-				}
-			}		
+			save_scope_as = middle_class_workers_leader_scope
+		}
+		
+		scope:middle_class_workers_leader_scope = {
+			place_character_in_void = 60
+			set_variable = middle_class_workers_leader_check
+		}
+		
+		set_variable = {
+			name = middle_class_workers_leader
+			value = scope:middle_class_workers_leader_scope
 		}
 	}
 }
@@ -384,20 +424,30 @@ sub_ig_assignment.14 = { # Small Businesses
 	type = country_event
 	hidden = yes
 	trigger = {
-		not = { has_variable = small_businesses_leader }
+		or = {
+			not = { has_variable = small_businesses_leader }
+			and = {
+				has_variable = small_businesses_leader
+				not = {
+					any_scope_character = { has_variable = small_businesses_leader_check }
+				}
+			}
+		}
 	}
 	immediate = {
 		create_character = {
 			interest_group = ig_petty_bourgeoisie
-			on_created = {
-				set_variable = small_businesses_leader_check
-				owner = {
-					set_variable = {
-						name = small_businesses_leader
-						value = PREV
-					}
-				}
-			}		
+			save_scope_as = small_businesses_leader_scope
+		}
+		
+		scope:small_businesses_leader_scope = {
+			place_character_in_void = 60
+			set_variable = small_businesses_leader_check
+		}
+		
+		set_variable = {
+			name = small_businesses_leader
+			value = scope:small_businesses_leader_scope
 		}
 	}
 }
@@ -406,20 +456,30 @@ sub_ig_assignment.15 = { # Patriots
 	type = country_event
 	hidden = yes
 	trigger = {
-		not = { has_variable = patriots_leader }
+		or = {
+			not = { has_variable = patriots_leader }
+			and = {
+				has_variable = patriots_leader
+				not = {
+					any_scope_character = { has_variable = patriots_leader_check }
+				}
+			}
+		}
 	}
 	immediate = {
 		create_character = {
 			interest_group = ig_petty_bourgeoisie
-			on_created = {
-				set_variable = patriots_leader_check
-				owner = {
-					set_variable = {
-						name = patriots_leader
-						value = PREV
-					}
-				}
-			}		
+			save_scope_as = patriots_leader_scope
+		}
+		
+		scope:patriots_leader_scope = {
+			place_character_in_void = 60
+			set_variable = patriots_leader_check
+		}
+		
+		set_variable = {
+			name = patriots_leader
+			value = scope:patriots_leader_scope
 		}
 	}
 }
@@ -428,20 +488,30 @@ sub_ig_assignment.16 = { # Academics
 	type = country_event
 	hidden = yes
 	trigger = {
-		not = { has_variable = academics_leader }
+		or = {
+			not = { has_variable = academics_leader }
+			and = {
+				has_variable = academics_leader
+				not = {
+					any_scope_character = { has_variable = academics_leader_check }
+				}
+			}
+		}
 	}
 	immediate = {
 		create_character = {
 			interest_group = ig_educated_professionals
-			on_created = {
-				set_variable = academics_leader_check
-				owner = {
-					set_variable = {
-						name = academics_leader
-						value = PREV
-					}
-				}
-			}		
+			save_scope_as = academics_leader_scope
+		}
+		
+		scope:academics_leader_scope = {
+			place_character_in_void = 60
+			set_variable = academics_leader_check
+		}
+		
+		set_variable = {
+			name = academics_leader
+			value = scope:academics_leader_scope
 		}
 	}
 }
@@ -450,20 +520,30 @@ sub_ig_assignment.17 = { # Urban Professionals
 	type = country_event
 	hidden = yes
 	trigger = {
-		not = { has_variable = urban_professionals_leader }
+		or = {
+			not = { has_variable = urban_professionals_leader }
+			and = {
+				has_variable = urban_professionals_leader
+				not = {
+					any_scope_character = { has_variable = urban_professionals_leader_check }
+				}
+			}
+		}
 	}
 	immediate = {
 		create_character = {
 			interest_group = ig_educated_professionals
-			on_created = {
-				set_variable = urban_professionals_leader_check
-				owner = {
-					set_variable = {
-						name = urban_professionals_leader
-						value = PREV
-					}
-				}
-			}		
+			save_scope_as = urban_professionals_leader_scope
+		}
+		
+		scope:urban_professionals_leader_scope = {
+			place_character_in_void = 60
+			set_variable = urban_professionals_leader_check
+		}
+		
+		set_variable = {
+			name = urban_professionals_leader
+			value = scope:urban_professionals_leader_scope
 		}
 	}
 }
@@ -472,20 +552,30 @@ sub_ig_assignment.18 = { # Scientific Professionals
 	type = country_event
 	hidden = yes
 	trigger = {
-		not = { has_variable = scientific_professionals_leader }
+		or = {
+			not = { has_variable = scientific_professionals_leader }
+			and = {
+				has_variable = scientific_professionals_leader
+				not = {
+					any_scope_character = { has_variable = scientific_professionals_leader_check }
+				}
+			}
+		}
 	}
 	immediate = {
 		create_character = {
 			interest_group = ig_educated_professionals
-			on_created = {
-				set_variable = scientific_professionals_leader_check
-				owner = {
-					set_variable = {
-						name = scientific_professionals_leader
-						value = PREV
-					}
-				}
-			}		
+			save_scope_as = scientific_professionals_leader_scope
+		}
+		
+		scope:scientific_professionals_leader_scope = {
+			place_character_in_void = 60
+			set_variable = scientific_professionals_leader_check
+		}
+		
+		set_variable = {
+			name = scientific_professionals_leader
+			value = scope:scientific_professionals_leader_scope
 		}
 	}
 }
@@ -494,20 +584,30 @@ sub_ig_assignment.19 = { # Agricultural Businesses
 	type = country_event
 	hidden = yes
 	trigger = {
-		not = { has_variable = agricultural_businesses_leader }
+		or = {
+			not = { has_variable = agricultural_businesses_leader }
+			and = {
+				has_variable = agricultural_businesses_leader
+				not = {
+					any_scope_character = { has_variable = agricultural_businesses_leader_check }
+				}
+			}
+		}
 	}
 	immediate = {
 		create_character = {
 			interest_group = ig_rural_communities
-			on_created = {
-				set_variable = agricultural_businesses_leader_check
-				owner = {
-					set_variable = {
-						name = agricultural_businesses_leader
-						value = PREV
-					}
-				}
-			}		
+			save_scope_as = agricultural_businesses_leader_scope
+		}
+		
+		scope:agricultural_businesses_leader_scope = {
+			place_character_in_void = 60
+			set_variable = agricultural_businesses_leader_check
+		}
+		
+		set_variable = {
+			name = agricultural_businesses_leader
+			value = scope:agricultural_businesses_leader_scope
 		}
 	}
 }
@@ -516,20 +616,30 @@ sub_ig_assignment.20 = { # Small Farms
 	type = country_event
 	hidden = yes
 	trigger = {
-		not = { has_variable = small_farms_leader }
+		or = {
+			not = { has_variable = small_farms_leader }
+			and = {
+				has_variable = small_farms_leader
+				not = {
+					any_scope_character = { has_variable = small_farms_leader_check }
+				}
+			}
+		}
 	}
 	immediate = {
 		create_character = {
 			interest_group = ig_rural_communities
-			on_created = {
-				set_variable = small_farms_leader_check
-				owner = {
-					set_variable = {
-						name = small_farms_leader
-						value = PREV
-					}
-				}
-			}		
+			save_scope_as = small_farms_leader_scope
+		}
+		
+		scope:small_farms_leader_scope = {
+			place_character_in_void = 60
+			set_variable = small_farms_leader_check
+		}
+		
+		set_variable = {
+			name = small_farms_leader
+			value = scope:small_farms_leader_scope
 		}
 	}
 }
@@ -538,20 +648,30 @@ sub_ig_assignment.21 = { # Revolutionary Rural Groups
 	type = country_event
 	hidden = yes
 	trigger = {
-		not = { has_variable = revolutionary_rural_groups_leader }
+		or = {
+			not = { has_variable = revolutionary_rural_leader }
+			and = {
+				has_variable = revolutionary_rural_leader
+				not = {
+					any_scope_character = { has_variable = revolutionary_rural_leader_check }
+				}
+			}
+		}
 	}
 	immediate = {
 		create_character = {
 			interest_group = ig_rural_communities
-			on_created = {
-				set_variable = revolutionary_rural_groups_leader_check
-				owner = {
-					set_variable = {
-						name = revolutionary_rural_groups_leader
-						value = PREV
-					}
-				}
-			}		
+			save_scope_as = revolutionary_rural_leader_scope
+		}
+		
+		scope:revolutionary_rural_leader_scope = {
+			place_character_in_void = 60
+			set_variable = revolutionary_rural_leader_check
+		}
+		
+		set_variable = {
+			name = revolutionary_rural_leader
+			value = scope:revolutionary_rural_leader_scope
 		}
 	}
 }
@@ -560,20 +680,30 @@ sub_ig_assignment.22 = { # Civil Service
 	type = country_event
 	hidden = yes
 	trigger = {
-		not = { has_variable = civil_service_leader }
+		or = {
+			not = { has_variable = civil_service_leader }
+			and = {
+				has_variable = civil_service_leader
+				not = {
+					any_scope_character = { has_variable = civil_service_leader_check }
+				}
+			}
+		}
 	}
 	immediate = {
 		create_character = {
 			interest_group = ig_state_employees
-			on_created = {
-				set_variable = civil_service_leader_check
-				owner = {
-					set_variable = {
-						name = civil_service_leader
-						value = PREV
-					}
-				}
-			}		
+			save_scope_as = civil_service_leader_scope
+		}
+		
+		scope:civil_service_leader_scope = {
+			place_character_in_void = 60
+			set_variable = civil_service_leader_check
+		}
+		
+		set_variable = {
+			name = civil_service_leader
+			value = scope:civil_service_leader_scope
 		}
 	}
 }
@@ -582,20 +712,30 @@ sub_ig_assignment.23 = { # Public Sector Workers
 	type = country_event
 	hidden = yes
 	trigger = {
-		not = { has_variable = public_sector_leader }
+		or = {
+			not = { has_variable = public_sector_leader }
+			and = {
+				has_variable = public_sector_leader
+				not = {
+					any_scope_character = { has_variable = public_sector_leader_check }
+				}
+			}
+		}
 	}
 	immediate = {
 		create_character = {
 			interest_group = ig_state_employees
-			on_created = {
-				set_variable = public_sector_leader_check
-				owner = {
-					set_variable = {
-						name = public_sector_leader
-						value = PREV
-					}
-				}
-			}		
+			save_scope_as = public_sector_leader_scope
+		}
+		
+		scope:public_sector_leader_scope = {
+			place_character_in_void = 60
+			set_variable = public_sector_leader_check
+		}
+		
+		set_variable = {
+			name = public_sector_leader
+			value = scope:public_sector_leader_scope
 		}
 	}
 }
@@ -604,20 +744,30 @@ sub_ig_assignment.24 = { # Security Services
 	type = country_event
 	hidden = yes
 	trigger = {
-		not = { has_variable = security_services_leader }
+		or = {
+			not = { has_variable = security_services_leader }
+			and = {
+				has_variable = security_services_leader
+				not = {
+					any_scope_character = { has_variable = security_services_leader_check }
+				}
+			}
+		}
 	}
 	immediate = {
 		create_character = {
 			interest_group = ig_state_employees
-			on_created = {
-				set_variable = security_services_leader_check
-				owner = {
-					set_variable = {
-						name = security_services_leader
-						value = PREV
-					}
-				}
-			}		
+			save_scope_as = security_services_leader_scope
+		}
+		
+		scope:security_services_leader_scope = {
+			place_character_in_void = 60
+			set_variable = security_services_leader_check
+		}
+		
+		set_variable = {
+			name = security_services_leader
+			value = scope:security_services_leader_scope
 		}
 	}
 }
@@ -626,20 +776,30 @@ sub_ig_assignment.25 = { # Democratic Workers
 	type = country_event
 	hidden = yes
 	trigger = {
-		not = { has_variable = democratic_workers_leader }
+		or = {
+			not = { has_variable = democratic_workers_leader }
+			and = {
+				has_variable = democratic_workers_leader
+				not = {
+					any_scope_character = { has_variable = democratic_workers_leader_check }
+				}
+			}
+		}
 	}
 	immediate = {
 		create_character = {
 			interest_group = ig_workers
-			on_created = {
-				set_variable = democratic_workers_leader_check
-				owner = {
-					set_variable = {
-						name = democratic_workers_leader
-						value = PREV
-					}
-				}
-			}		
+			save_scope_as = democratic_workers_leader_scope
+		}
+		
+		scope:democratic_workers_leader_scope = {
+			place_character_in_void = 60
+			set_variable = democratic_workers_leader_check
+		}
+		
+		set_variable = {
+			name = democratic_workers_leader
+			value = scope:democratic_workers_leader_scope
 		}
 	}
 }
@@ -648,20 +808,30 @@ sub_ig_assignment.26 = { # Trade Unionists
 	type = country_event
 	hidden = yes
 	trigger = {
-		not = { has_variable = trade_unionists_leader }
+		or = {
+			not = { has_variable = trade_unionists_leader }
+			and = {
+				has_variable = trade_unionists_leader
+				not = {
+					any_scope_character = { has_variable = trade_unionists_leader_check }
+				}
+			}
+		}
 	}
 	immediate = {
 		create_character = {
 			interest_group = ig_workers
-			on_created = {
-				set_variable = trade_unionists_leader_check
-				owner = {
-					set_variable = {
-						name = trade_unionists_leader
-						value = PREV
-					}
-				}
-			}		
+			save_scope_as = trade_unionists_leader_scope
+		}
+		
+		scope:trade_unionists_leader_scope = {
+			place_character_in_void = 60
+			set_variable = trade_unionists_leader_check
+		}
+		
+		set_variable = {
+			name = trade_unionists_leader
+			value = scope:trade_unionists_leader_scope
 		}
 	}
 }
@@ -670,20 +840,30 @@ sub_ig_assignment.27 = { # Revolutionary Workers
 	type = country_event
 	hidden = yes
 	trigger = {
-		not = { has_variable = revolutionary_workers_leader }
+		or = {
+			not = { has_variable = revolutionary_workers_leader }
+			and = {
+				has_variable = revolutionary_workers_leader
+				not = {
+					any_scope_character = { has_variable = revolutionary_workers_leader_check }
+				}
+			}
+		}
 	}
 	immediate = {
 		create_character = {
 			interest_group = ig_workers
-			on_created = {
-				set_variable = revolutionary_workers_leader_check
-				owner = {
-					set_variable = {
-						name = revolutionary_workers_leader
-						value = PREV
-					}
-				}
-			}		
+			save_scope_as = revolutionary_workers_leader_scope
+		}
+		
+		scope:revolutionary_workers_leader_scope = {
+			place_character_in_void = 60
+			set_variable = revolutionary_workers_leader_check
+		}
+		
+		set_variable = {
+			name = revolutionary_workers_leader
+			value = scope:revolutionary_workers_leader_scope
 		}
 	}
 }
