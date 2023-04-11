@@ -6,7 +6,7 @@
 			ruler = yes
 			ig_leader = yes
 			birth_date = 1890.8.10
-			interest_group = ig_entrepreneurs
+			interest_group = ig_petty_bourgeoisie
 			ideology = ideology_national_liberal
 			traits = {
 			}

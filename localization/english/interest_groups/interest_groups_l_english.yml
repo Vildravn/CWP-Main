@@ -7,9 +7,9 @@
   ig_elites_only_icon: "@elites!"
   ig_elites_desc: "The owners of great estates and vast plantations, the elites are custodians of tradition and old money."
 
-  ig_intellectuals: "Intellectuals"
-  ig_intellectuals_only_icon: "@intellectuals!"
-  ig_intellectuals_desc: "The intellectuals leading the nation's trends in literature, art, music and theater."
+  ig_educated_professionals: "Intellectuals"
+  ig_educated_professionals_only_icon: "@intellectuals!"
+  ig_educated_professionals_desc: "The intellectuals leading the nation's trends in literature, art, music and theater."
 
   ig_educated_professionals: "Educated Professionals"
   ig_educated_professionals_only_icon: "@intellectuals!"

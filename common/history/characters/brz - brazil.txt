@@ -17,7 +17,7 @@
 			religion = rel:catholic
 			ig_leader = yes
 			birth_date = 1882.04.19
-			interest_group = ig:ig_conglomerates
+			interest_group = ig:ig_corporations
 			ideology = ideology_corporatist
 			traits = {
 				charismatic
@@ -59,7 +59,7 @@
 			culture = cu:brazilian
 			religion = rel:catholic
 			ig_leader = yes
-			interest_group = ig:ig_intellectuals
+			interest_group = ig:ig_educated_professionals
 			ideology = ideology_progressive
 			traits = {
 				reserved
@@ -86,7 +86,7 @@
 			culture = cu:brazilian
 			religion = rel:catholic
 			ig_leader = yes
-			interest_group = ig:ig_rural_folk
+			interest_group = ig:ig_rural_communities
 			ideology = ideology_marxist_leninist
 			traits = {
 				cautious
@@ -98,7 +98,7 @@
 			culture = cu:brazilian
 			religion = rel:catholic
 			ig_leader = yes
-			interest_group = ig:ig_entrepreneurs
+			interest_group = ig:ig_petty_bourgeoisie
 			ideology = ideology_liberal_conservative
 			traits = {
 				reserved
@@ -111,7 +111,7 @@
 			culture = cu:brazilian
 			religion = rel:atheist
 			ig_leader = yes
-			interest_group = ig:ig_socialists
+			interest_group = ig:ig_workers
 			ideology = ideology_marxist_leninist
 			traits = {
 				brave

@@ -1388,7 +1388,7 @@ types information_panels_types
 									
 								}
 								flowcontainer = {
-									visible = "[Country.MakeScope.Var('revolutionary_rural_groups_leader').IsSet]"
+									visible = "[Country.MakeScope.Var('revolutionary_rural_leader').IsSet]"
 									direction = horizontal
 									spacing = 20
 									margin = { 60 10 }
@@ -1409,7 +1409,7 @@ types information_panels_types
 										size = { 30 30 }
 										character_portrait_medium = {
 											scale = 0.7
-											datacontext = "[Country.MakeScope.Var('revolutionary_rural_groups_leader').GetCharacter]"
+											datacontext = "[Country.MakeScope.Var('revolutionary_rural_leader').GetCharacter]"
 											using = tooltip_above
 											blockoverride "show_hat" {}
 											parentanchor = vcenter

@@ -82,7 +82,7 @@ small_farms_value = {
 }
 
 revolutionary_rural_groups_value = {
-	value = var:revolutionary_rural_groups_leader.popularity
+	value = var:revolutionary_rural_leader.popularity
 }
 ##### State Employees #####
 civil_service_value = {

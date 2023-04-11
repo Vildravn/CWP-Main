@@ -5,12 +5,12 @@
 		set_tax_level = medium
 		# Laws
 		effect_starting_politics_authoritarian_communist = yes
-		ig:ig_socialists = {
+		ig:ig_workers = {
 			add_ruling_interest_group = yes
 			add_ideology = ideology_proletarian
 			
 		}
-		ig:ig_intellectuals = {
+		ig:ig_educated_professionals = {
 			add_ruling_interest_group = yes
 			add_ideology = ideology_revolutionary
 		}
@@ -20,7 +20,7 @@
 		ig:ig_devout = {
 			remove_ruling_interest_group = no
 		}
-		ig:ig_conglomerates = {
+		ig:ig_corporations = {
 			remove_ruling_interest_group = no
 		}
 	}

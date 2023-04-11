@@ -110,7 +110,7 @@ DEFAULT = {
 			exists = scope:actor
 			scope:actor = {
 				is_secessionist = no
-				ig:ig_rural_folk = {
+				ig:ig_rural_communities = {
 					is_powerful = yes
 					is_in_government = yes
 				}
@@ -154,7 +154,7 @@ DEFAULT = {
 			exists = scope:actor
 			scope:actor = {
 				is_secessionist = no
-				ig:ig_intellectuals = {
+				ig:ig_educated_professionals = {
 					is_powerful = yes
 					is_in_government = yes
 				}
@@ -170,7 +170,7 @@ DEFAULT = {
 			exists = scope:actor
 			scope:actor = {
 				is_secessionist = no
-				ig:ig_conglomerates = {
+				ig:ig_corporations = {
 					is_powerful = yes
 					is_in_government = yes
 				}
@@ -218,7 +218,7 @@ DEFAULT = {
 			exists = scope:actor
 			scope:actor = {
 				is_secessionist = no
-				ig:ig_entrepreneurs = {
+				ig:ig_petty_bourgeoisie = {
 					is_powerful = yes
 					is_in_government = yes
 				}
@@ -234,7 +234,7 @@ DEFAULT = {
 			exists = scope:actor
 			scope:actor = {
 				is_secessionist = no
-				ig:ig_socialists = {
+				ig:ig_workers = {
 					is_powerful = yes
 					is_in_government = yes
 				}

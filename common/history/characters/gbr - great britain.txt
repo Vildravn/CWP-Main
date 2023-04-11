@@ -7,7 +7,7 @@
 			ruler = yes
 			ig_leader = yes
 			birth_date = 1883.01.03
-			interest_group = ig_socialists
+			interest_group = ig_workers
 			ideology = ideology_social_democracy
 			traits = {
 				career_politician
@@ -33,7 +33,7 @@
 			culture = cu:british
 			ig_leader = yes
 			birth_date = 1883.8.23
-			interest_group = ig_conglomerates
+			interest_group = ig_corporations
 			ideology = ideology_conservative
 			traits = {
 				career_businessperson
@@ -46,7 +46,7 @@
 			culture = cu:scottish
 			ig_leader = yes
 			birth_date = 1894.2.10
-			interest_group = ig_entrepreneurs
+			interest_group = ig_petty_bourgeoisie
 			ideology = ideology_liberal_conservative
 			traits = {
 				career_politician
@@ -90,7 +90,7 @@
 			culture = cu:welsh
 			ig_leader = yes
 			birth_date = 1884.2.19
-			interest_group = ig_intellectuals
+			interest_group = ig_educated_professionals
 			ideology = ideology_classical_liberal
 			traits = {
 				direct

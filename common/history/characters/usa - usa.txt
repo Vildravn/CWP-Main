@@ -9,7 +9,7 @@
 			ruler = yes
 			ig_leader = yes
 			birth_date = 1884.5.8
-			interest_group = ig:ig_entrepreneurs
+			interest_group = ig:ig_petty_bourgeoisie
 			ideology = ideology_national_liberal
 			traits = {
 				charismatic
@@ -55,7 +55,7 @@
 			religion = rel:protestant
 			ig_leader = yes
 			birth_date = 1900.2.5
-			interest_group = ig:ig_intellectuals
+			interest_group = ig:ig_educated_professionals
 			# temporary pending creation of dixiecrat unique ideology
 			ideology = ideology_classical_liberal
 			traits = {
@@ -70,7 +70,7 @@
 			religion = rel:protestant
 			ig_leader = yes
 			birth_date = 1907.6.8
-			interest_group = ig:ig_conglomerates
+			interest_group = ig:ig_corporations
 			ideology = ideology_conservative
 			traits = {
 				self_righteous
@@ -112,7 +112,7 @@
 			religion = rel:protestant
 			ig_leader = yes
 			birth_date = 1889.9.8
-			interest_group = ig:ig_rural_folk
+			interest_group = ig:ig_rural_communities
 			ideology = ideology_paternalistic_conservative
 			traits = {
 				career_politician
@@ -126,7 +126,7 @@
 			religion = rel:protestant
 			ig_leader = yes
 			birth_date = 1907.10.1
-			interest_group = ig:ig_socialists
+			interest_group = ig:ig_workers
 			ideology = ideology_social_democracy
 			traits = {
 				charismatic
@@ -140,7 +140,7 @@
 			culture = cu:eastern_american
 			religion = rel:catholic
 			birth_date = 1917.5.29
-			interest_group = ig:ig_intellectuals
+			interest_group = ig:ig_educated_professionals
 			ideology = ideology_progressive
 		}
 		create_character = {

@@ -7,7 +7,7 @@ CHARACTERS = {
 			ruler = yes
 			ig_leader = yes
 			birth_date = 1894.11.17
-			interest_group = ig_socialists
+			interest_group = ig_workers
 			ideology = ideology_social_democracy
 			traits = {
 				career_academic
@@ -35,7 +35,7 @@ CHARACTERS = {
 			ruler = no
 			ig_leader = yes
 			birth_date = 1897.11.17
-			interest_group = ig_conglomerates
+			interest_group = ig_corporations
 			ideology = ideology_liberal_conservative
 			traits = {
 				career_businessperson
@@ -63,7 +63,7 @@ CHARACTERS = {
 			ruler = no
 			ig_leader = yes
 			birth_date = 1899.7.19
-			interest_group = ig_socialists
+			interest_group = ig_workers
 			ideology = ideology_marxist_leninist
 			traits = {
 				career_trade_unionist

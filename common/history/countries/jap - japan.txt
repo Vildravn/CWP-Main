@@ -39,7 +39,7 @@
 			add_ideology = ideology_isolationist
 			add_ideology = ideology_loyalist			#?
 		}
-		ig:ig_entrepreneurs = {
+		ig:ig_petty_bourgeoisie = {
 			set_interest_group_name = ig_Professional_Middle_Class
 			remove_ideology = ideology_patriotic
 			remove_ideology = ideology_reactionary_leader
@@ -50,7 +50,7 @@
 			remove_ideology = ideology_jingoist
 			remove_ideology = ideology_patriotic
 		}
-        ig:ig_conglomerates = {
+        ig:ig_corporations = {
 			set_interest_group_name = ig_Keiretsu
 			set_ig_suppression = yes
 		}
